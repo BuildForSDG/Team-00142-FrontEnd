@@ -7,7 +7,7 @@ import SearchBar from './components/layout/SearchBar';
 // import './App.css';
 // import Navbar from './includes/Navbar';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-// import Login from './components/Login';
+// import Login from './components/Login.';
 
 const App = () => {
   useEffect(() =>{
@@ -15,10 +15,12 @@ const App = () => {
     M.AutoInit();
   })
   return (
+  
   <Fragment>
     <NavBar/>
     <SearchBar/>
-  </Fragment>
+     </Fragment>
+ 
   );
 };
 
