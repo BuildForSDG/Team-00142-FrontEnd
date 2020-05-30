@@ -3,7 +3,7 @@ import Riser from './Riser';
 
 const NavBar = () => {
   return (
-    <div className="navbar-fixed" style={divStyle}>
+    <div className="navbar" style={divStyle}>
       <nav>
         <div className="nav-wrapper lime lighten-5">
           <a href="#!" className="brand-logo">
@@ -29,7 +29,7 @@ const NavBar = () => {
             <a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a>
             </li>
             <li>
-            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Log in</a>
+            <a class="waves-effect orange accent-1 btn"><i class="material-icons right">trending_up</i>Log in</a>
             </li>
           </ul>
         </div>
