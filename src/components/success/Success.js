@@ -1,4 +1,5 @@
 import React from 'react';
+import Riser from '../layout/Riser'
 
 const Success = () => {
   return (
@@ -84,6 +85,7 @@ const Success = () => {
             <div className="row">
               <div className="col 4 s3">
                 <h5 className="white-text">Footer Content</h5>
+                <a className="white-text"><Riser/></a>
                 <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
               <div className="col 4 s3">
