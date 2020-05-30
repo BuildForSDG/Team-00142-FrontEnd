@@ -3,11 +3,14 @@ import React,{useEffect, Fragment} from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import NavBar from './components/layout/NavBar';
-import SearchBar from './components/layout/SearchBar';
-// import './App.css';
-// import Navbar from './includes/Navbar';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Login from './components/Login';
+import Community from './components/community/Community';
+import Group from './components/group/Group';
+import Success from './components/success/Success';
+import Slide from  './components/layout/Slide';
+import Header from './components/layout/Header';
+
+import "./App.css";
+import "./slider-animations.css";
 
 const App = () => {
   useEffect(() =>{
@@ -16,8 +19,17 @@ const App = () => {
   })
   return (
   <Fragment>
+   <Header/>
     <NavBar/>
-    <SearchBar/>
+    
+    <Slide/>
+    <Community/>
+    <Group/>
+    <Success/>
+    <div className="container">
+    
+    </div>
+   
   </Fragment>
   );
 };
