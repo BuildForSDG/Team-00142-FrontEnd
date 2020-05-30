@@ -21,7 +21,6 @@ const App = () => {
   <Fragment>
    <Header/>
     <NavBar/>
-    
     <Slide/>
     <Community/>
     <Group/>

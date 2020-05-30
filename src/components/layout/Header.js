@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div class="header" >
+    <div className="header" >
        <ul >
           <li>
             <a href="#">Help Center</a>

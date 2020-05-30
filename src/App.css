@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 2.0;
+ 
+}
 .header {
   overflow: hidden;
   background-color: #0d47a1;
@@ -15,28 +26,29 @@
 .header li a {
   color: white;
 }
+.navbar{
+  /* margin-bottom: 0px; */
 
+}
 .nav-wrapper li a {
   color: black;
   font-size: 19px;
-}
-.navbar{
-  padding: 4px 50px;
-  border: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
- 
+  
 }
 
+
 .slider-wrapper {
+ 
   position: relative;
   height: 70vh;
   overflow: hidden;
+ 
 }
 
 .slide {
   height: 70vh;
   background-size: cover !important;
+  
 }
 
 .slide::before {
