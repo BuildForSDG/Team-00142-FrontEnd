@@ -1,5 +1,6 @@
-import React from 'react';
+import React  from 'react';
 import Riser from './Riser';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -14,19 +15,20 @@ const NavBar = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <a href="#">Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to='/about'>About</Link>
             </li>
             <li>
-              <a href="#">Projects</a>
+            <Link to='/projects'>Projects</Link>
             </li>
             <li>
-              <a href="">Register</a>
+              <Link to='/register'>Register</Link>
             </li>
             <li>
             <a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a>
+            
             </li>
             <li>
             <a class="waves-effect orange accent-1 btn"><i class="material-icons right">trending_up</i>Log in</a>
