@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h1>About this App</h1>
      <p>
-       this is bjoko
+       Version 1.0.0
      </p>
     </div>
   )
