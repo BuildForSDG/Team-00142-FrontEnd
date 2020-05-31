@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Group = () => {
+const Youth = () => {
   return (
     <div>
-      <h1 className="center">Projects Proposed By People Living With Disability</h1>
+    <h1 className="center">Projects Proposed By The Youth </h1>
   <div className="row">
     
     <div className="col s3 m4">
@@ -76,8 +76,9 @@ const Group = () => {
           </div>
           </div>
   </div>
-    </div>
-  )
+  </div>
+  );
+  
 }
 
-export default Group
+export default Youth

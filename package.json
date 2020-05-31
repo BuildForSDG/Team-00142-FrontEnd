@@ -30,12 +30,15 @@
   },
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "materialize-css": "^1.0.0",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

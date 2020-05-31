@@ -1,52 +1,37 @@
-import React,{useEffect, Fragment} from 'react';
+import React, { useEffect, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import NavBar from './components/layout/NavBar';
-
-import Community from './components/community/Community';
-import Group from './components/group/Group';
-import Success from './components/success/Success';
-import Slide from  './components/layout/Slide';
 import Header from './components/layout/Header';
-
-import "./App.css";
-import "./slider-animations.css";
-
-import SearchBar from './components/layout/SearchBar';
-// import Login from './components/Login/login.';
-// import './App.css';
-// import Navbar from './includes/Navbar';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Projects from './components/pages/Projects';
+import Register from './components/pages/Register';
+import './App.css';
+import './slider-animations.css';
 
 const App = () => {
-  useEffect(() =>{
+  useEffect(() => {
     //Init Materialize JS
     M.AutoInit();
-  })
+  });
   return (
- 
-  
-  <Fragment>
-   <Header/>
-    <NavBar/>
+    <Router>
+      <Fragment>
+        <Header />
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/register" component={Register} />
+          {/* <Route exact path="/login" component={Login} /> */}
 
-    <Slide/>
-    <Community/>
-    <Group/>
-    <Success/>
-    <div className="container">
-    
-    </div>
-   
-  </Fragment>
-
-    <SearchBar/>
-     </Fragment>
- 
-
+        </Switch>
+      </Fragment>
+    </Router>
   );
 };
 

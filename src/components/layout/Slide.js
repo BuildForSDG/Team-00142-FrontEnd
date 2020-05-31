@@ -8,7 +8,7 @@ import 'react-animated-slider/build/horizontal.css';
 
 const content = [
   {
-    title: 'Vulputate Mollis Ultricies Fermentum Parturient',
+    title: '  Our Business Is Helping Yours Grow',
     description:
       'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
 
