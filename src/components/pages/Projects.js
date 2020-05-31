@@ -1,12 +1,14 @@
 import React from 'react'
-import Header from '../layout/Header'
-import NavBar from '../layout/NavBar'
+import Community from '../community/Community'
+import Group from '../group/Group'
+import Youth from '../youth/Youth'
 
 const Projects = () => {
   return (
     <div>
-      <h2>I am a champion</h2>
-      
+      <Community/>
+      <Group/>
+      <Youth/>
     </div>
   )
 }
