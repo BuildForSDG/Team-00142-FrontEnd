@@ -19,23 +19,31 @@
     "lint": "eslint \"src/**/*.js\"",
     "start": "parcel ./src/index.html"
   },
-  "author": {
-    "name": "Build For SDG",
-    "email": "buildforsdg@andela.com"
-  },
+  "author": "Build For SDG <buildforsdg@andela.com>",
   "homepage": "https://github.com/BuildForSDG/js-starter#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BuildForSDG/js-starter.git"
+    "url": "git+https://github.com/BuildForSDG/js-starter.git"
   },
   "bugs": {
     "url": "https://github.com/BuildForSDG/js-starter/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "materialize-css": "^1.0.0",
+    "react": "^16.13.1",
+    "react-animated-slider": "^2.0.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "uuid": "^8.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "babel-jest": "^25.4.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
