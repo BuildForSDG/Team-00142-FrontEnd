@@ -7,8 +7,8 @@ const Projects = () => {
   return (
     <div>
       <Community/>
-      <Group/>
-      <Youth/>
+      {/* <Group/>
+      <Youth/> */}
     </div>
   )
 }
