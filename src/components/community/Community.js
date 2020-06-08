@@ -26,7 +26,7 @@ export default class Community extends Component {
 
   async componentDidMount() {
     axios
-    .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
+    .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
       .then((res) => {
         this.setState({ projects: res.data });
       })
@@ -38,21 +38,26 @@ export default class Community extends Component {
 
   render() {
     let projectList = this.state.projects.map((item) => {
+
       return (
-        <div key={item.id}>
-          <h1 className="center">Community Based Projects</h1>
-          <div className="row">
+        <div key={item.id}>        
+          <div className="card">
             <div className="col s3 m4">
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
-              <div className="card">
+              <div className="card center">
                 <div className="card-image">
-                  <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
+                  {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
                 </div>
                 <div className="card-content">
-                  <p className="truncate">{item.typeOfProject}</p>
+                  <h5 className="truncate">Assistance: {item.typeOfAssistanceRequired}</h5>
+                  <p className="truncate">Type: {item.typeOfProject}</p>
+                  <sup>Demographic - {item.projectDemographic}</sup>
+                  <br/>
+                  <sup>{item.projectProposer}</sup>
+                  <br/><hr/><br/>
+                  <i>{item.projectDetails}</i>
                 </div>
                 <div className="card-content">
-                  <p className="truncate">{item.typeOfAssistanceRequired}</p>
                 </div>
                 <div className="card-action">
                   <a href="#" className="blue-text">READ</a>
@@ -71,8 +76,9 @@ export default class Community extends Component {
     });
 
     return (
-      <div className="container">
-         <div >{projectList}</div>
+      <div className="row">
+        <h2>Community Based Projects</h2>
+         <div className="col-md-3">{projectList}</div>
       </div>
     )
   }
