@@ -27,11 +27,11 @@ const NavBar = () => {
               <Link to='/register'>Register</Link>
             </li>
             <li>
-            <a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a>
+            <a href="sass.html"><i className="material-icons left">search</i>Link with Left Icon</a>
             
             </li>
             <li>
-            <a class="waves-effect orange accent-1 btn"><i class="material-icons right">trending_up</i>Log in</a>
+            <a className="waves-effect orange accent-1 btn"><i className="material-icons right">trending_up</i>Log in</a>
             </li>
           </ul>
         </div>
@@ -50,9 +50,9 @@ const NavBar = () => {
         <li>
           <a href="mobile.html">Register</a>
         </li>
-        <a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a>
+        <a href="sass.html"><i className="material-icons left">search</i>Link with Left Icon</a>
         <li>
-        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Log in</a>
+        <a className="waves-effect waves-light btn"><i className="material-icons left">cloud</i>Log in</a>
         </li>
       </ul>
     </div>

@@ -1,22 +1,36 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import axios from "axios";
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-class Community extends Component {
+export default class Community extends Component {
   
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      projects: [],
+      projects: []
     };
   }
 
-  componentDidMount() {
+  // componentDidMount() {
+  //   fetch('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
+  //   .then(response =>{
+  //       return response.json();
+  //   })
+  //   .then(products=>{
+  //       this.setState({products});
+  //   })
+  //   .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }
+
+  async componentDidMount() {
     axios
-      .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
+    .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
       .then((res) => {
         this.setState({ projects: res.data });
       })
+      console.log(res.data)
       .catch((error) => {
         console.log(error);
       });
@@ -37,10 +51,10 @@ class Community extends Component {
 
                 </div>
                 <div className="card-content">
-                  <p className="truncate">{item.projectDetails}</p>
+                  <p className="truncate">{item.typeOfProject}</p>
                 </div>
                 <div className="card-content">
-                  <p className="truncate">{item.typeOfAssistanceRequired}</p>
+                  {/* <p className="truncate">{item.typeOfAssistanceRequired}</p> */}
                 </div>
                 <div className="card-action">
                   <a href="#" className="blue-text">READ</a>
@@ -60,13 +74,11 @@ class Community extends Component {
 
     return (
       <div className="container">
-         <div className="box">{projectList}</div>
+         <div >{projectList}</div>
       </div>
     )
   }
 
-
-
 }
 
-export default Community
+
