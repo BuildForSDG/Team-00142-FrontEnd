@@ -26,7 +26,7 @@ class Group extends Component {
   render() {
     let projectList = this.state.projects.map((item) => {
       return (
-        <div key={item.id}>        
+        <div class="container" key={item.id}>        
           <div className="card center">
             <div className="col s3 m4">
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
@@ -62,7 +62,7 @@ class Group extends Component {
 
     return (
       <div className="row">
-        <h2>Youth Based Projects</h2>
+        <h3 class = "heading">Youth Based Projects</h3>
          <div className="col-md-3">{projectList}</div>
       </div>
     )

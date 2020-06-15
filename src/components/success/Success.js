@@ -3,9 +3,10 @@ import Riser from '../layout/Riser'
 
 const Success = () => {
   return (
-    <div>
+    <div >
       <h1 className="center">Our Success Stories</h1>
-      <div className="row">
+      <div class="container">
+      <div  className="row">
         <div className="col s3 m4">
           <div className="card">
             <div className="card-image">
@@ -63,6 +64,7 @@ const Success = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div className="card center">
         <div className="col s12 m7">
