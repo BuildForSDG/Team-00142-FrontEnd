@@ -17,7 +17,6 @@ class Group extends Component {
       .then((res) => {
         this.setState({ projects: res.data });
       })
-      console.log(res.data)
       .catch((error) => {
         console.log(error);
       });
@@ -26,7 +25,7 @@ class Group extends Component {
   render() {
     let projectList = this.state.projects.map((item) => {
       return (
-        <div class="container" key={item.id}>        
+        <div className="cont container-fluid" key={item.id}>        
           <div className="card center">
             <div className="col s3 m4">
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
