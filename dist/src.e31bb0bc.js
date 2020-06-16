@@ -34337,8 +34337,7 @@ class Community extends _react.Component {
       this.setState({
         projects: res.data
       });
-    }) // console.log(res.data)
-    .catch(error => {
+    }).catch(error => {
       console.log(error);
     });
   }
@@ -34428,8 +34427,7 @@ class Group extends _react.Component {
       this.setState({
         projects: res.data
       });
-    }) // console.log(res.data)
-    .catch(error => {
+    }).catch(error => {
       console.log(error);
     });
   }
@@ -34520,8 +34518,7 @@ class Group extends _react.Component {
       this.setState({
         projects: res.data
       });
-    }) // console.log(res.data)
-    .catch(error => {
+    }).catch(error => {
       console.log(error);
     });
   }
@@ -34850,8 +34847,56 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Individual = () => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "cont container-fluid"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Individual project"), /*#__PURE__*/_react.default.createElement("p", null, "details for each project"));
+    className: "cont container-fluid center"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col s3 m4"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-image"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-content"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-title"
+  }, /*#__PURE__*/_react.default.createElement("h5", null, "Wajir health organized Group")), /*#__PURE__*/_react.default.createElement("p", {
+    className: "truncate"
+  }, "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-action"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "btn waves-effect waves-light blue darken-4"
+  }, "See More")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col s3 m4"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-image"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: "https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-content"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-title"
+  }, /*#__PURE__*/_react.default.createElement("h5", null, "Wajir health organized Group"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-action"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col s3 m4"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-image"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-content"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-title"
+  }, /*#__PURE__*/_react.default.createElement("h5", null, "Proposed by Wajir Co-Group Members"), /*#__PURE__*/_react.default.createElement("h5", {
+    className: "truncate"
+  }, "Financial Assistance required for ", /*#__PURE__*/_react.default.createElement("br", null), "KES 1.3 Million")), /*#__PURE__*/_react.default.createElement("p", null, "project members - 50"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "truncate"
+  }, "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-action"
+  })))));
 };
 
 var _default = Individual;
@@ -34976,7 +35021,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59452" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60734" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
