@@ -34303,7 +34303,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _axios = _interopRequireDefault(require("axios"));
 
-var _materializeMin = _interopRequireDefault(require("materialize-css/dist/js/materialize.min.js"));
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34311,6 +34311,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+// import M from 'materialize-css/dist/js/materialize.min.js';
 class Community extends _react.Component {
   constructor(props) {
     super(props);
@@ -34336,9 +34337,8 @@ class Community extends _react.Component {
       this.setState({
         projects: res.data
       });
-    });
-
-    console.log(res.data).catch(error => {
+    }) // console.log(res.data)
+    .catch(error => {
       console.log(error);
     });
   }
@@ -34346,7 +34346,7 @@ class Community extends _react.Component {
   render() {
     let projectList = this.state.projects.map(item => {
       return /*#__PURE__*/_react.default.createElement("div", {
-        class: "container",
+        className: "cont container-fluid",
         key: item.id
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "card"
@@ -34368,7 +34368,8 @@ class Community extends _react.Component {
         className: "card-content"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
-      }, /*#__PURE__*/_react.default.createElement("a", {
+      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/individual",
         href: "#",
         className: "blue-text"
       }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
@@ -34384,7 +34385,7 @@ class Community extends _react.Component {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h3", {
-      class: "heading"
+      className: "heading"
     }, "Community Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
     }, projectList));
@@ -34393,7 +34394,7 @@ class Community extends _react.Component {
 }
 
 exports.default = Community;
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js"}],"components/group/Group.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"components/group/Group.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34405,7 +34406,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _axios = _interopRequireDefault(require("axios"));
 
-var _materializeMin = _interopRequireDefault(require("materialize-css/dist/js/materialize.min.js"));
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34413,6 +34414,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+// import M from 'materialize-css/dist/js/materialize.min.js';
 class Group extends _react.Component {
   constructor(props) {
     super(props);
@@ -34426,9 +34428,8 @@ class Group extends _react.Component {
       this.setState({
         projects: res.data
       });
-    });
-
-    console.log(res.data).catch(error => {
+    }) // console.log(res.data)
+    .catch(error => {
       console.log(error);
     });
   }
@@ -34436,7 +34437,7 @@ class Group extends _react.Component {
   render() {
     let projectList = this.state.projects.map(item => {
       return /*#__PURE__*/_react.default.createElement("div", {
-        class: "container",
+        className: "cont container-fluid",
         key: item.id
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "card center"
@@ -34458,7 +34459,8 @@ class Group extends _react.Component {
         className: "card-content"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
-      }, /*#__PURE__*/_react.default.createElement("a", {
+      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/individual",
         href: "#",
         className: "blue-text"
       }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
@@ -34474,7 +34476,7 @@ class Group extends _react.Component {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h3", {
-      class: "heading"
+      className: "heading"
     }, "Group Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
     }, projectList));
@@ -34484,7 +34486,7 @@ class Group extends _react.Component {
 
 var _default = Group;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js"}],"components/youth/Youth.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"components/youth/Youth.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34496,7 +34498,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _axios = _interopRequireDefault(require("axios"));
 
-var _materializeMin = _interopRequireDefault(require("materialize-css/dist/js/materialize.min.js"));
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34504,6 +34506,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+// import M from 'materialize-css/dist/js/materialize.min.js';
 class Group extends _react.Component {
   constructor(props) {
     super(props);
@@ -34517,9 +34520,8 @@ class Group extends _react.Component {
       this.setState({
         projects: res.data
       });
-    });
-
-    console.log(res.data).catch(error => {
+    }) // console.log(res.data)
+    .catch(error => {
       console.log(error);
     });
   }
@@ -34527,7 +34529,7 @@ class Group extends _react.Component {
   render() {
     let projectList = this.state.projects.map(item => {
       return /*#__PURE__*/_react.default.createElement("div", {
-        class: "container",
+        className: "cont container-fluid",
         key: item.id
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "card center"
@@ -34549,7 +34551,8 @@ class Group extends _react.Component {
         className: "card-content"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
-      }, /*#__PURE__*/_react.default.createElement("a", {
+      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/individual",
         href: "#",
         className: "blue-text"
       }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
@@ -34565,7 +34568,7 @@ class Group extends _react.Component {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h3", {
-      class: "heading"
+      className: "heading"
     }, "Youth Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
     }, projectList));
@@ -34575,7 +34578,7 @@ class Group extends _react.Component {
 
 var _default = Group;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js"}],"components/pages/Projects.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"components/pages/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34617,7 +34620,7 @@ const Success = () => {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", {
     className: "center"
   }, "Our Success Stories"), /*#__PURE__*/_react.default.createElement("div", {
-    class: "container"
+    className: "cont container-fluid"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "row"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -34806,7 +34809,9 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const About = () => {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "About this App"), /*#__PURE__*/_react.default.createElement("p", null, "Version 1.0.0"));
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "cont container-fluid"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "About this App"), /*#__PURE__*/_react.default.createElement("p", null, "Version 1.0.0"));
 };
 
 var _default = About;
@@ -34824,10 +34829,32 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Register = () => {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, "Please Register"));
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "cont container-fluid"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Please Register"));
 };
 
 var _default = Register;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/pages/Individual.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Individual = () => {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "cont container-fluid"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Individual project"), /*#__PURE__*/_react.default.createElement("p", null, "details for each project"));
+};
+
+var _default = Individual;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -34867,6 +34894,8 @@ var _Projects = _interopRequireDefault(require("./components/pages/Projects"));
 
 var _Register = _interopRequireDefault(require("./components/pages/Register"));
 
+var _Individual = _interopRequireDefault(require("./components/pages/Individual"));
+
 require("./App.css");
 
 require("./slider-animations.css");
@@ -34898,12 +34927,16 @@ const App = () => {
     exact: true,
     path: "/register",
     component: _Register.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/individual",
+    component: _Individual.default
   }))));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./App.css":"App.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./components/pages/Individual":"components/pages/Individual.js","./App.css":"App.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34943,7 +34976,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59254" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59452" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

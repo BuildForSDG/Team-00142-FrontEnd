@@ -293,6 +293,10 @@ body {
     font-size: 32px;
   }
 }
+
+.cont {
+  margin: 40px;
+}
 .slide h1 {
 	transition: all 0.3s ease;
 	-webkit-transform: translateY(-20px);
