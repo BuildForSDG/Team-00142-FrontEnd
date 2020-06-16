@@ -18,7 +18,6 @@ class Group extends Component {
       .then((res) => {
         this.setState({ projects: res.data });
       })
-      // console.log(res.data)
       .catch((error) => {
         console.log(error);
       });
