@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import M from 'materialize-css/dist/js/materialize.min.js';
+import { Link } from 'react-router-dom';
+// import M from 'materialize-css/dist/js/materialize.min.js';
 
 class Group extends Component {
   
@@ -17,7 +18,6 @@ class Group extends Component {
       .then((res) => {
         this.setState({ projects: res.data });
       })
-      console.log(res.data)
       .catch((error) => {
         console.log(error);
       });
@@ -26,7 +26,7 @@ class Group extends Component {
   render() {
     let projectList = this.state.projects.map((item) => {
       return (
-        <div class="container" key={item.id}>        
+        <div className="cont container-fluid" key={item.id}>        
           <div className="card center">
             <div className="col s3 m4">
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
@@ -45,7 +45,8 @@ class Group extends Component {
                 <div className="card-content">
                 </div>
                 <div className="card-action">
-                  <a href="#" className="blue-text">READ</a>
+                <Link to="/individual" href="#" className="blue-text">READ</Link>
+                  {/* <a href="#" className="blue-text">READ</a> */}
                   <button className="btn waves-effect waves-light blue-grey right">
                     <i className="material-icons ">share</i>
                   </button>
@@ -62,7 +63,7 @@ class Group extends Component {
 
     return (
       <div className="row">
-        <h3 class = "heading">Youth Based Projects</h3>
+        <h3 className = "heading">Youth Based Projects</h3>
          <div className="col-md-3">{projectList}</div>
       </div>
     )

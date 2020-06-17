@@ -5,7 +5,7 @@ const Success = () => {
   return (
     <div >
       <h1 className="center">Our Success Stories</h1>
-      <div class="container">
+      <div className="cont container-fluid">
       <div  className="row">
         <div className="col s3 m4">
           <div className="card">
