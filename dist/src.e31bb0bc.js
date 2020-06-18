@@ -34359,7 +34359,7 @@ class Community extends _react.Component {
       console.log(error);
     });
 
-    alert('test');
+    alert('func usage test');
   }
 
   render() {
@@ -34446,7 +34446,12 @@ class Group extends _react.Component {
   }
 
   componentDidMount() {
+    this._isMount = true;
     this.getGroupProjects();
+  }
+
+  componentWillUnmount() {
+    this._isMount = false;
   }
 
   async getGroupProjects() {
@@ -34541,7 +34546,12 @@ class Group extends _react.Component {
   }
 
   componentDidMount() {
+    this._isMount = true;
     this.getYouthProjects();
+  }
+
+  componentWillUnmount() {
+    this._isMount = false;
   }
 
   async getYouthProjects() {

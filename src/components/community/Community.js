@@ -53,7 +53,7 @@ export default class Community extends Component {
       console.log(error);
     });
 
-    alert('test');
+    alert('func usage test');
   }
 
   render() {

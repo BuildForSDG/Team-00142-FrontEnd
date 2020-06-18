@@ -13,7 +13,12 @@ class Group extends Component {
   }
 
   componentDidMount() {
+    this._isMount = true;
     this.getYouthProjects();
+  }
+
+  componentWillUnmount(){
+    this._isMount = false;
   }
 
   async getYouthProjects() {
