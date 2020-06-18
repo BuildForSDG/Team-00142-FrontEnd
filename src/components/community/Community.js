@@ -8,24 +8,24 @@ export default class Community extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      isLoading: true,
     };
   }
 
-  // componentDidMount() {
-  //   fetch('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
-  //   .then(response =>{
-  //       return response.json();
-  //   })
-  //   .then(products=>{
-  //       this.setState({products});
-  //   })
-  //   .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
+   componentDidMount() {
+    // axios
+    // .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
+    //   .then((res) => {
+    //     this.setState({ projects: res.data });
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    this.getProjects();
+  }
 
-  async componentDidMount() {
+  async getProjects() {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
       .then((res) => {
