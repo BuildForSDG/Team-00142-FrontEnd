@@ -22,10 +22,10 @@ export default class Community extends Component {
     //   .catch((error) => {
     //     console.log(error);
     //   });
-    this.getProjects();
+    this.getCommunityProjects();
   }
 
-  async getProjects() {
+  async getCommunityProjects() {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
       .then((res) => {
