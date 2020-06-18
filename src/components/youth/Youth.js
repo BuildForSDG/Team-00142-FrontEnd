@@ -16,7 +16,7 @@ class Group extends Component {
     this.getYouthProjects();
   }
 
-  getYouthProjects() {
+  async getYouthProjects() {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail')
       .then((res) => {

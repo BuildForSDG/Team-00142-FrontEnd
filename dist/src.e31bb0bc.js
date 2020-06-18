@@ -34522,7 +34522,7 @@ class Group extends _react.Component {
     this.getYouthProjects();
   }
 
-  getYouthProjects() {
+  async getYouthProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail').then(res => {
       this.setState({
         projects: res.data
