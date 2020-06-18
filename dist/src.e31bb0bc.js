@@ -34330,6 +34330,7 @@ class Community extends _react.Component {
     //   .catch((error) => {
     //     console.log(error);
     //   });
+    this._isMount = true;
     this.getCommunityProjects();
   }
 
@@ -34341,6 +34342,24 @@ class Community extends _react.Component {
     }).catch(error => {
       console.log(error);
     });
+  }
+
+  componentWillUnMount() {
+    this._isMount = false;
+  }
+
+  async getIndividualProject(id) {
+    this.getIndividualProject && this.getIndividualProject(id);
+
+    _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}').then(res => {
+      this.setState({
+        projects: res.data
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+
+    alert('test');
   }
 
   render() {
@@ -34373,13 +34392,16 @@ class Community extends _react.Component {
         href: "#",
         className: "blue-text"
       }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
+        className: "btn btn-info",
+        onClick: this.getIndividualProject.bind(item.id)
+      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
-        className: "material-icons "
+        className: "material-icons"
       }, "share")), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn brown"
       }, /*#__PURE__*/_react.default.createElement("i", {
-        className: "material-icons "
+        className: "material-icons"
       }, "favorite")))))));
     });
     return /*#__PURE__*/_react.default.createElement("div", {
