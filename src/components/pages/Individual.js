@@ -1,4 +1,5 @@
 import React from 'react'
+import Spinner from 'react-bootstrap/Spinner'
 
 const Individual = () => {
   return (
@@ -62,10 +63,14 @@ const Individual = () => {
           </div>
           <div className="card-action">
             {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
+            
           </div>
         </div>
       </div>
     </div>
+    <Spinner animation="grow" variant="info" >
+      <span className="sr-only">Loading...</span>
+    </Spinner>
     </div>
   )
 }

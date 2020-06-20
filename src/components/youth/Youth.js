@@ -12,7 +12,11 @@ class Group extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getYouthProjects();
+  }
+
+  async getYouthProjects() {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail')
       .then((res) => {

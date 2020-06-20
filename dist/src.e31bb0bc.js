@@ -34316,23 +34316,25 @@ class Community extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      isLoading: true
     };
-  } // componentDidMount() {
-  //   fetch('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
-  //   .then(response =>{
-  //       return response.json();
-  //   })
-  //   .then(products=>{
-  //       this.setState({products});
-  //   })
-  //   .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
+  }
 
+  componentDidMount() {
+    // axios
+    // .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
+    //   .then((res) => {
+    //     this.setState({ projects: res.data });
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    this._isMount = true;
+    this.getCommunityProjects();
+  }
 
-  async componentDidMount() {
+  async getCommunityProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail').then(res => {
       this.setState({
         projects: res.data
@@ -34340,6 +34342,24 @@ class Community extends _react.Component {
     }).catch(error => {
       console.log(error);
     });
+  }
+
+  componentWillUnMount() {
+    this._isMount = false;
+  }
+
+  async getIndividualProject(id) {
+    this.getIndividualProject && this.getIndividualProject(id);
+
+    _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}').then(res => {
+      this.setState({
+        projects: res.data
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+
+    alert('test');
   }
 
   render() {
@@ -34372,13 +34392,16 @@ class Community extends _react.Component {
         href: "#",
         className: "blue-text"
       }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
+        className: "btn btn-info",
+        onClick: this.getIndividualProject.bind(item.id)
+      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
-        className: "material-icons "
+        className: "material-icons"
       }, "share")), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn brown"
       }, /*#__PURE__*/_react.default.createElement("i", {
-        className: "material-icons "
+        className: "material-icons"
       }, "favorite")))))));
     });
     return /*#__PURE__*/_react.default.createElement("div", {
@@ -34422,7 +34445,11 @@ class Group extends _react.Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getGroupProjects();
+  }
+
+  async getGroupProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail').then(res => {
       this.setState({
         projects: res.data
@@ -34513,7 +34540,11 @@ class Group extends _react.Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getYouthProjects();
+  }
+
+  async getYouthProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail').then(res => {
       this.setState({
         projects: res.data
@@ -34833,7 +34864,204 @@ const Register = () => {
 
 var _default = Register;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/pages/Individual.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
+var define;
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		// register as 'classnames', consistent with npm package name
+		define('classnames', [], function () {
+			return classNames;
+		});
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+},{}],"../node_modules/@restart/context/forwardRef.js":[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+exports.default = forwardRef;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function forwardRef(renderFn, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      propTypes = _ref.propTypes,
+      defaultProps = _ref.defaultProps,
+      _ref$allowFallback = _ref.allowFallback,
+      allowFallback = _ref$allowFallback === void 0 ? false : _ref$allowFallback,
+      _ref$displayName = _ref.displayName,
+      displayName = _ref$displayName === void 0 ? renderFn.name || renderFn.displayName : _ref$displayName;
+
+  var render = function render(props, ref) {
+    return renderFn(props, ref);
+  };
+
+  return Object.assign(_react.default.forwardRef || !allowFallback ? _react.default.forwardRef(render) : function (props) {
+    return render(props, null);
+  }, {
+    displayName: displayName,
+    propTypes: propTypes,
+    defaultProps: defaultProps
+  });
+}
+},{"react":"../node_modules/react/index.js"}],"../node_modules/react-bootstrap/esm/ThemeProvider.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useBootstrapPrefix = useBootstrapPrefix;
+exports.createBootstrapComponent = createBootstrapComponent;
+exports.default = exports.ThemeConsumer = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _forwardRef = _interopRequireDefault(require("@restart/context/forwardRef"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ThemeContext = _react.default.createContext({});
+
+var Consumer = ThemeContext.Consumer,
+    Provider = ThemeContext.Provider;
+exports.ThemeConsumer = Consumer;
+
+function ThemeProvider(_ref) {
+  var prefixes = _ref.prefixes,
+      children = _ref.children;
+  var copiedPrefixes = (0, _react.useMemo)(function () {
+    return (0, _extends2.default)({}, prefixes);
+  }, [prefixes]);
+  return /*#__PURE__*/_react.default.createElement(Provider, {
+    value: copiedPrefixes
+  }, children);
+}
+
+function useBootstrapPrefix(prefix, defaultPrefix) {
+  var prefixes = (0, _react.useContext)(ThemeContext);
+  return prefix || prefixes[defaultPrefix] || defaultPrefix;
+}
+
+function createBootstrapComponent(Component, opts) {
+  if (typeof opts === 'string') opts = {
+    prefix: opts
+  };
+  var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
+
+  var _opts = opts,
+      prefix = _opts.prefix,
+      _opts$forwardRefAs = _opts.forwardRefAs,
+      forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
+  return (0, _forwardRef.default)(function (_ref2, ref) {
+    var props = (0, _extends2.default)({}, _ref2);
+    props[forwardRefAs] = ref; // eslint-disable-next-line react/prop-types
+
+    var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
+    return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
+      bsPrefix: bsPrefix
+    }));
+  }, {
+    displayName: "Bootstrap(" + (Component.displayName || Component.name) + ")"
+  });
+}
+
+var _default = ThemeProvider;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@restart/context/forwardRef":"../node_modules/@restart/context/forwardRef.js","react":"../node_modules/react/index.js"}],"../node_modules/react-bootstrap/esm/Spinner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _ThemeProvider = require("./ThemeProvider");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Spinner = _react.default.forwardRef(function (_ref, ref) {
+  var bsPrefix = _ref.bsPrefix,
+      variant = _ref.variant,
+      animation = _ref.animation,
+      size = _ref.size,
+      children = _ref.children,
+      _ref$as = _ref.as,
+      Component = _ref$as === void 0 ? 'div' : _ref$as,
+      className = _ref.className,
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "animation", "size", "children", "as", "className"]);
+  bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'spinner');
+  var bsSpinnerPrefix = bsPrefix + "-" + animation;
+  return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
+    ref: ref
+  }, props, {
+    className: (0, _classnames.default)(className, bsSpinnerPrefix, size && bsSpinnerPrefix + "-" + size, variant && "text-" + variant)
+  }), children);
+});
+
+Spinner.displayName = 'Spinner';
+var _default = Spinner;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","classnames":"../node_modules/classnames/index.js","react":"../node_modules/react/index.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js"}],"components/pages/Individual.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34842,6 +35070,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _Spinner = _interopRequireDefault(require("react-bootstrap/Spinner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34896,12 +35126,17 @@ const Individual = () => {
     className: "truncate"
   }, "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.")), /*#__PURE__*/_react.default.createElement("div", {
     className: "card-action"
-  })))));
+  })))), /*#__PURE__*/_react.default.createElement(_Spinner.default, {
+    animation: "grow",
+    variant: "info"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "sr-only"
+  }, "Loading...")));
 };
 
 var _default = Individual;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-bootstrap/Spinner":"../node_modules/react-bootstrap/esm/Spinner.js"}],"App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -35021,7 +35256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60734" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52288" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
