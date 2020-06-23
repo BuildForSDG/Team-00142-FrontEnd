@@ -30,8 +30,8 @@ export default class Community extends Component {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail')
       .then((res) => {
-        this.setState({ projects: res.data });
-      })
+        this.setState({ projects: res.data, isLoading: false });
+      }) 
       .catch((error) => {
         console.log(error);
       });
@@ -41,20 +41,20 @@ export default class Community extends Component {
     this._isMount = false;
   }
 
-  async getIndividualProject(id) {
+  // async getIndividualProject(id) {
 
-    this.getIndividualProject && this.getIndividualProject(id);
-    axios
-    .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}')
-    .then(res => {
-      this.setState({projects: res.data});
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
-    alert('test');
-  }
+  //   this.getIndividualProject && this.getIndividualProject(id);
+  //   axios
+  //   .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}')
+  //   .then(res => {
+  //     this.setState({projects: res.data});
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  //   alert('function test')
+    
+  // }
 
   render() {
     let projectList = this.state.projects.map((item) => {
@@ -80,8 +80,10 @@ export default class Community extends Component {
                 <div className="card-content">
                 </div>
                 <div className="card-action">
-                <Link to="/individual" href="#" className="blue-text">READ</Link>
-                <button className="btn btn-info" onClick={this.getIndividualProject.bind(item.id)}>DETAILS</button>
+
+                <Link to={`/individual/${item.id}`} className="blue-text">DETAILS</Link>
+
+                {/* <button className="btn btn-info" onClick={this.getIndividualProject.bind(item.id)}>DETAILS</button> */}
                   <button className="btn waves-effect waves-light blue-grey right">
                     <i className="material-icons">share</i>
                   </button>
@@ -99,7 +101,7 @@ export default class Community extends Component {
     return (
       <div className="row">
         <h3 className = "heading">Community Based Projects</h3>
-         <div className="col-md-3">{projectList}</div>
+         <div className="col-md-3">{this.state.isLoading ? <div className="loader">Loading... </div> : projectList}</div>
       </div>
     )
   }

@@ -11,6 +11,7 @@ import Projects from './components/pages/Projects';
 import Register from './components/pages/Register';
 import Individual from './components/pages/Individual';
 import './App.css';
+import './CustomStyle.css'
 import './slider-animations.css';
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/individual" component={Individual} />
+          <Route exact path="/individual/:id" component={Individual} />
           {/* <Route exact path="/login" component={Login} /> */}
 
         </Switch>
