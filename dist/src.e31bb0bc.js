@@ -34337,7 +34337,8 @@ class Community extends _react.Component {
   async getCommunityProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail').then(res => {
       this.setState({
-        projects: res.data
+        projects: res.data,
+        isLoading: false
       });
     }).catch(error => {
       console.log(error);
@@ -34351,7 +34352,7 @@ class Community extends _react.Component {
   async getIndividualProject(id) {
     this.getIndividualProject && this.getIndividualProject(id);
 
-    _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}').then(res => {
+    _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/').then(res => {
       this.setState({
         projects: res.data
       });
@@ -34359,7 +34360,7 @@ class Community extends _react.Component {
       console.log(error);
     });
 
-    alert('func usage test');
+    alert('function test');
   }
 
   render() {
@@ -34410,7 +34411,9 @@ class Community extends _react.Component {
       className: "heading"
     }, "Community Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
-    }, projectList));
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("div", {
+      className: "loader"
+    }, "Loading... ") : projectList));
   }
 
 }
@@ -34441,7 +34444,8 @@ class Group extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      isLoading: true
     };
   }
 
@@ -34457,7 +34461,8 @@ class Group extends _react.Component {
   async getGroupProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail').then(res => {
       this.setState({
-        projects: res.data
+        projects: res.data,
+        isLoading: false
       });
     }).catch(error => {
       console.log(error);
@@ -34509,7 +34514,9 @@ class Group extends _react.Component {
       className: "heading"
     }, "Group Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
-    }, projectList));
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("div", {
+      className: "loader"
+    }, "Loading... ") : projectList));
   }
 
 }
@@ -34541,7 +34548,8 @@ class Group extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      isLoading: true
     };
   }
 
@@ -34557,7 +34565,8 @@ class Group extends _react.Component {
   async getYouthProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail').then(res => {
       this.setState({
-        projects: res.data
+        projects: res.data,
+        isLoading: false
       });
     }).catch(error => {
       console.log(error);
@@ -34609,7 +34618,9 @@ class Group extends _react.Component {
       className: "heading"
     }, "Youth Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
-    }, projectList));
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("div", {
+      className: "loader"
+    }, "Loading... ") : projectList));
   }
 
 }
@@ -35079,74 +35090,119 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _Spinner = _interopRequireDefault(require("react-bootstrap/Spinner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Individual = () => {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "cont container-fluid center"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "row"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "col s3 m4"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-image"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-content"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-title"
-  }, /*#__PURE__*/_react.default.createElement("h5", null, "Wajir health organized Group")), /*#__PURE__*/_react.default.createElement("p", {
-    className: "truncate"
-  }, "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-action"
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn waves-effect waves-light blue darken-4"
-  }, "See More")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "col s3 m4"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-image"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-content"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-title"
-  }, /*#__PURE__*/_react.default.createElement("h5", null, "Wajir health organized Group"))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-action"
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "col s3 m4"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-image"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-content"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-title"
-  }, /*#__PURE__*/_react.default.createElement("h5", null, "Proposed by Wajir Co-Group Members"), /*#__PURE__*/_react.default.createElement("h5", {
-    className: "truncate"
-  }, "Financial Assistance required for ", /*#__PURE__*/_react.default.createElement("br", null), "KES 1.3 Million")), /*#__PURE__*/_react.default.createElement("p", null, "project members - 50"), /*#__PURE__*/_react.default.createElement("p", {
-    className: "truncate"
-  }, "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "card-action"
-  })))), /*#__PURE__*/_react.default.createElement(_Spinner.default, {
-    animation: "grow",
-    variant: "info"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "sr-only"
-  }, "Loading...")));
-};
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-var _default = Individual;
-exports.default = _default;
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+class Individual extends _react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: [],
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    const {
+      match
+    } = this.props;
+    axios(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => this.setState({
+      project: res.data.data[0],
+      isLoading: false
+    }));
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement("div", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", null, "Loading...") : this.state.project.description);
+  } // return (
+  //   <div className="cont container-fluid center">
+  //   <div  className="row">
+  //     <div className="col s3 m4">
+  //       <div className="card">
+  //         <div className="card-image">
+  //           {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
+  //         </div>
+  //         <div className="card-content">
+  //           <span className="card-title">
+  //             <h5>Wajir health organized Group</h5>
+  //           </span>
+  //           <p className="truncate">
+  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
+  //             require little markup to use effectively.
+  //           </p>
+  //         </div>
+  //         <div className="card-action">
+  //           <button className="btn waves-effect waves-light blue darken-4">See More</button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //     <div className="col s3 m4">
+  //       <div className="card">
+  //         <div className="card-image">
+  //           <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
+  //         </div>
+  //         <div className="card-content">
+  //           <span className="card-title">
+  //             <h5>Wajir health organized Group</h5>
+  //           </span>
+  //           {/* <p className="truncate">
+  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
+  //             require little markup to use effectively.
+  //           </p> */}
+  //         </div>
+  //         <div className="card-action">
+  //           {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
+  //         </div>
+  //       </div>
+  //     </div>
+  //     <div className="col s3 m4">
+  //       <div className="card">
+  //         <div className="card-image">
+  //           {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
+  //         </div>
+  //         <div className="card-content">
+  //           <span className="card-title">
+  //             <h5>Proposed by Wajir Co-Group Members</h5>
+  //           <h5 className="truncate">
+  //             Financial Assistance required for <br/>KES 1.3 Million
+  //           </h5>
+  //           </span>
+  //           <p>project members - 50</p>
+  //           <p className="truncate">
+  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
+  //             require little markup to use effectively.
+  //           </p>
+  //         </div>
+  //         <div className="card-action">
+  //           {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  //   <Spinner animation="grow" variant="info" >
+  //     <span className="sr-only">Loading...</span>
+  //   </Spinner>
+  //   </div>
+  // )
+
+
+} // export default Individual
+
+
+exports.default = Individual;
 },{"react":"../node_modules/react/index.js","react-bootstrap/Spinner":"../node_modules/react-bootstrap/esm/Spinner.js"}],"App.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"CustomStyle.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -35188,6 +35244,8 @@ var _Individual = _interopRequireDefault(require("./components/pages/Individual"
 
 require("./App.css");
 
+require("./CustomStyle.css");
+
 require("./slider-animations.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -35219,14 +35277,14 @@ const App = () => {
     component: _Register.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
-    path: "/individual",
+    path: "/individual/:id",
     component: _Individual.default
   }))));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./components/pages/Individual":"components/pages/Individual.js","./App.css":"App.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./components/pages/Individual":"components/pages/Individual.js","./App.css":"App.css","./CustomStyle.css":"CustomStyle.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -35266,7 +35324,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52288" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57566" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

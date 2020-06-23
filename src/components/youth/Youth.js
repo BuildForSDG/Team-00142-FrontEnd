@@ -8,7 +8,8 @@ class Group extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      isLoading: true
     };
   }
 
@@ -25,7 +26,7 @@ class Group extends Component {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail')
       .then((res) => {
-        this.setState({ projects: res.data });
+        this.setState({ projects: res.data, isLoading: false });
       })
       .catch((error) => {
         console.log(error);
@@ -73,7 +74,7 @@ class Group extends Component {
     return (
       <div className="row">
         <h3 className = "heading">Youth Based Projects</h3>
-         <div className="col-md-3">{projectList}</div>
+        <div className="col-md-3">{this.state.isLoading ? <div className="loader">Loading... </div> : projectList}</div>
       </div>
     )
   }
