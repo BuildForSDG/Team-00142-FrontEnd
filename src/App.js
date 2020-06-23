@@ -9,7 +9,9 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Projects from './components/pages/Projects';
 import Register from './components/pages/Register';
-import Individual from './components/pages/Individual';
+import IndividualCommunity from './components/community/IndividualCommunity';
+import IndividualGroup from './components/group/IndividualGroup';
+import IndividualYouth from './components/youth/IndividualYouth';
 import './App.css';
 import './CustomStyle.css'
 import './slider-animations.css';
@@ -29,7 +31,9 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/individual/:id" component={Individual} />
+          <Route exact path="/individualCommunity/:id" component={IndividualCommunity} />
+          <Route exact path="/individualGroup/:id" component={IndividualGroup} />
+          <Route exact path="/individualYouth/:id" component={IndividualYouth} />
           {/* <Route exact path="/login" component={Login} /> */}
 
         </Switch>

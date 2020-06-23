@@ -55,8 +55,7 @@ class Group extends Component {
                 <div className="card-content">
                 </div>
                 <div className="card-action">
-                <Link to="/individual" href="#" className="blue-text">READ</Link>
-                  {/* <a href="#" className="blue-text">READ</a> */}
+                <Link to={`/individualYouth/${item.id}`} className="blue-text">DETAILS</Link>
                   <button className="btn waves-effect waves-light blue-grey right">
                     <i className="material-icons ">share</i>
                   </button>

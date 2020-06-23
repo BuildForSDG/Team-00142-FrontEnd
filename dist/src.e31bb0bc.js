@@ -34387,7 +34387,7 @@ class Community extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: `/individual/${item.id}`,
+        to: `/individualCommunity/${item.id}`,
         className: "blue-text"
       }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
@@ -34489,10 +34489,9 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/individual",
-        href: "#",
+        to: `/individualGroup/${item.id}`,
         className: "blue-text"
-      }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
+      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
         className: "material-icons "
@@ -34593,10 +34592,9 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/individual",
-        href: "#",
+        to: `/individualYouth/${item.id}`,
         className: "blue-text"
-      }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
+      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
         className: "material-icons "
@@ -34879,204 +34877,7 @@ const Register = () => {
 
 var _default = Register;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
-var define;
-/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (typeof module !== 'undefined' && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-		// register as 'classnames', consistent with npm package name
-		define('classnames', [], function () {
-			return classNames;
-		});
-	} else {
-		window.classNames = classNames;
-	}
-}());
-
-},{}],"../node_modules/@restart/context/forwardRef.js":[function(require,module,exports) {
-"use strict";
-
-exports.__esModule = true;
-exports.default = forwardRef;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function forwardRef(renderFn, _temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-      propTypes = _ref.propTypes,
-      defaultProps = _ref.defaultProps,
-      _ref$allowFallback = _ref.allowFallback,
-      allowFallback = _ref$allowFallback === void 0 ? false : _ref$allowFallback,
-      _ref$displayName = _ref.displayName,
-      displayName = _ref$displayName === void 0 ? renderFn.name || renderFn.displayName : _ref$displayName;
-
-  var render = function render(props, ref) {
-    return renderFn(props, ref);
-  };
-
-  return Object.assign(_react.default.forwardRef || !allowFallback ? _react.default.forwardRef(render) : function (props) {
-    return render(props, null);
-  }, {
-    displayName: displayName,
-    propTypes: propTypes,
-    defaultProps: defaultProps
-  });
-}
-},{"react":"../node_modules/react/index.js"}],"../node_modules/react-bootstrap/esm/ThemeProvider.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.useBootstrapPrefix = useBootstrapPrefix;
-exports.createBootstrapComponent = createBootstrapComponent;
-exports.default = exports.ThemeConsumer = void 0;
-
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
-
-var _forwardRef = _interopRequireDefault(require("@restart/context/forwardRef"));
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ThemeContext = _react.default.createContext({});
-
-var Consumer = ThemeContext.Consumer,
-    Provider = ThemeContext.Provider;
-exports.ThemeConsumer = Consumer;
-
-function ThemeProvider(_ref) {
-  var prefixes = _ref.prefixes,
-      children = _ref.children;
-  var copiedPrefixes = (0, _react.useMemo)(function () {
-    return (0, _extends2.default)({}, prefixes);
-  }, [prefixes]);
-  return /*#__PURE__*/_react.default.createElement(Provider, {
-    value: copiedPrefixes
-  }, children);
-}
-
-function useBootstrapPrefix(prefix, defaultPrefix) {
-  var prefixes = (0, _react.useContext)(ThemeContext);
-  return prefix || prefixes[defaultPrefix] || defaultPrefix;
-}
-
-function createBootstrapComponent(Component, opts) {
-  if (typeof opts === 'string') opts = {
-    prefix: opts
-  };
-  var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
-
-  var _opts = opts,
-      prefix = _opts.prefix,
-      _opts$forwardRefAs = _opts.forwardRefAs,
-      forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
-  return (0, _forwardRef.default)(function (_ref2, ref) {
-    var props = (0, _extends2.default)({}, _ref2);
-    props[forwardRefAs] = ref; // eslint-disable-next-line react/prop-types
-
-    var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
-    return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
-      bsPrefix: bsPrefix
-    }));
-  }, {
-    displayName: "Bootstrap(" + (Component.displayName || Component.name) + ")"
-  });
-}
-
-var _default = ThemeProvider;
-exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@restart/context/forwardRef":"../node_modules/@restart/context/forwardRef.js","react":"../node_modules/react/index.js"}],"../node_modules/react-bootstrap/esm/Spinner.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
-
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _ThemeProvider = require("./ThemeProvider");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Spinner = _react.default.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix,
-      variant = _ref.variant,
-      animation = _ref.animation,
-      size = _ref.size,
-      children = _ref.children,
-      _ref$as = _ref.as,
-      Component = _ref$as === void 0 ? 'div' : _ref$as,
-      className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "animation", "size", "children", "as", "className"]);
-  bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'spinner');
-  var bsSpinnerPrefix = bsPrefix + "-" + animation;
-  return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
-    ref: ref
-  }, props, {
-    className: (0, _classnames.default)(className, bsSpinnerPrefix, size && bsSpinnerPrefix + "-" + size, variant && "text-" + variant)
-  }), children);
-});
-
-Spinner.displayName = 'Spinner';
-var _default = Spinner;
-exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","classnames":"../node_modules/classnames/index.js","react":"../node_modules/react/index.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js"}],"components/pages/Individual.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/community/IndividualCommunity.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35085,8 +34886,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
-
-var _Spinner = _interopRequireDefault(require("react-bootstrap/Spinner"));
 
 var _axios = _interopRequireDefault(require("axios"));
 
@@ -35097,7 +34896,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 // const Individual = () => {
-class Individual extends _react.Component {
+class IndividualCommunity extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35111,9 +34910,9 @@ class Individual extends _react.Component {
       match
     } = this.props;
 
-    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => {
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${match.params.id}`).then(res => {
       this.setState({
-        project: res.data,
+        project: res.data.data,
         isLoading: false
       });
     }).catch(error => {
@@ -35122,88 +34921,221 @@ class Individual extends _react.Component {
   }
 
   render() {
+    // return (
+    //   <div className="container-fluid">
+    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
+    //   </div>
+    // );
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "container-fluid"
-    }, /*#__PURE__*/_react.default.createElement("h3", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+      className: "cont container-fluid center",
+      key: this.state.project.id
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col s3 m4"
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      className: "card-title"
+    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
-    }, "Loading...") : this.state.projectName));
-  } // render() {
-  // return (
-  //   <div className="cont container-fluid center">
-  //   <div  className="row">
-  //     <div className="col s3 m4">
-  //       <div className="card">
-  //         <div className="card-image">
-  //           {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
-  //         </div>
-  //         <div className="card-content">
-  //           <span className="card-title">
-  //             <h5>Wajir health organized Group</h5>
-  //           </span>
-  //           <p className="truncate">
-  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
-  //             require little markup to use effectively.
-  //           </p>
-  //         </div>
-  //         <div className="card-action">
-  //           <button className="btn waves-effect waves-light blue darken-4">See More</button>
-  //         </div>
-  //       </div>
-  //     </div>
-  //     <div className="col s3 m4">
-  //       <div className="card">
-  //         <div className="card-image">
-  //           <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
-  //         </div>
-  //         <div className="card-content">
-  //           <span className="card-title">
-  //             <h5>Wajir health organized Group</h5>
-  //           </span>
-  //           {/* <p className="truncate">
-  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
-  //             require little markup to use effectively.
-  //           </p> */}
-  //         </div>
-  //         <div className="card-action">
-  //           {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
-  //         </div>
-  //       </div>
-  //     </div>
-  //     <div className="col s3 m4">
-  //       <div className="card">
-  //         <div className="card-image">
-  //           <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
-  //         </div>
-  //         <div className="card-content">
-  //           <span className="card-title">
-  //             <h5>Proposed by Wajir Co-Group Members</h5>
-  //           <h5 className="truncate">
-  //             Financial Assistance required for <br/>KES 1.3 Million
-  //           </h5>
-  //           </span>
-  //           <p>project members - 50</p>
-  //           <p className="truncate">
-  //             I am a very simple card. I am good at containing small bits of information. I am convenient because I
-  //             require little markup to use effectively.
-  //           </p>
-  //         </div>
-  //         <div className="card-action">            
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  //   {/* <Spinner animation="grow" variant="info" >
-  //     <span className="sr-only">Loading...</span>
-  //   </Spinner> */}
-  //   </div>
-  // )};
-
+    }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card center"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-image"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ",
+      height: "350"
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }, /*#__PURE__*/_react.default.createElement("h5", {
+      className: "truncate"
+    }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
+      className: "truncate"
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-action"
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "btn brown"
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "material-icons"
+    }, "favorite")))))));
+  }
 
 }
 
-var _default = Individual;
+var _default = IndividualCommunity;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap/Spinner":"../node_modules/react-bootstrap/esm/Spinner.js","axios":"../node_modules/axios/index.js"}],"App.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"components/group/IndividualGroup.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+class IndividualGroup extends _react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: [],
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    const {
+      match
+    } = this.props;
+
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${match.params.id}`).then(res => {
+      this.setState({
+        project: res.data.data,
+        isLoading: false
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+  }
+
+  render() {
+    // return (
+    //   <div className="container-fluid">
+    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
+    //   </div>
+    // );
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "cont container-fluid center",
+      key: this.state.project.id
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col s3 m4"
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      className: "card-title"
+    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+      className: "loader"
+    }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card center"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-image"
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }, /*#__PURE__*/_react.default.createElement("h5", {
+      className: "truncate"
+    }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
+      className: "truncate"
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.financialDocumentation)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unenvironment.org%2Fpt-br%2Fnode%2F24047&psig=AOvVaw07bFdAWIUQDmmxtMOKvwGD&ust=1593019987332000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjF8Ya8mOoCFQAAAAAdAAAAABAD"
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-action"
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "btn brown"
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "material-icons"
+    }, "favorite")))))));
+  }
+
+}
+
+var _default = IndividualGroup;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"components/youth/IndividualYouth.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+class IndividualYouth extends _react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: [],
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    const {
+      match
+    } = this.props;
+
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${match.params.id}`).then(res => {
+      this.setState({
+        project: res.data.data,
+        isLoading: false
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+  }
+
+  render() {
+    // return (
+    //   <div className="container-fluid">
+    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
+    //   </div>
+    // );
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "cont container-fluid center",
+      key: this.state.project.id
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col s3 m4"
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      className: "card-title"
+    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+      className: "loader"
+    }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card center"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-image"
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }, /*#__PURE__*/_react.default.createElement("h5", {
+      className: "truncate"
+    }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
+      className: "truncate"
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-content"
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "card-action"
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "btn brown"
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "material-icons"
+    }, "favorite")))))));
+  }
+
+}
+
+var _default = IndividualYouth;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -35246,7 +35178,11 @@ var _Projects = _interopRequireDefault(require("./components/pages/Projects"));
 
 var _Register = _interopRequireDefault(require("./components/pages/Register"));
 
-var _Individual = _interopRequireDefault(require("./components/pages/Individual"));
+var _IndividualCommunity = _interopRequireDefault(require("./components/community/IndividualCommunity"));
+
+var _IndividualGroup = _interopRequireDefault(require("./components/group/IndividualGroup"));
+
+var _IndividualYouth = _interopRequireDefault(require("./components/youth/IndividualYouth"));
 
 require("./App.css");
 
@@ -35283,14 +35219,22 @@ const App = () => {
     component: _Register.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
-    path: "/individual/:id",
-    component: _Individual.default
+    path: "/individualCommunity/:id",
+    component: _IndividualCommunity.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/individualGroup/:id",
+    component: _IndividualGroup.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/individualYouth/:id",
+    component: _IndividualYouth.default
   }))));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./components/pages/Individual":"components/pages/Individual.js","./App.css":"App.css","./CustomStyle.css":"CustomStyle.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","materialize-css/dist/css/materialize.min.css":"../node_modules/materialize-css/dist/css/materialize.min.css","materialize-css/dist/js/materialize.min.js":"../node_modules/materialize-css/dist/js/materialize.min.js","./components/layout/NavBar":"components/layout/NavBar.js","./components/layout/Header":"components/layout/Header.js","./components/pages/Home":"components/pages/Home.js","./components/pages/About":"components/pages/About.js","./components/pages/Projects":"components/pages/Projects.js","./components/pages/Register":"components/pages/Register.js","./components/community/IndividualCommunity":"components/community/IndividualCommunity.js","./components/group/IndividualGroup":"components/group/IndividualGroup.js","./components/youth/IndividualYouth":"components/youth/IndividualYouth.js","./App.css":"App.css","./CustomStyle.css":"CustomStyle.css","./slider-animations.css":"slider-animations.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -35330,7 +35274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64985" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50793" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

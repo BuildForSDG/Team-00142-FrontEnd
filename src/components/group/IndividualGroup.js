@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-
-// const Individual = () => {
   
-class Individual extends Component {
+class IndividualGroup extends Component {
 
   constructor(props) {
     super(props);
@@ -16,7 +14,7 @@ class Individual extends Component {
   componentDidMount() {
     const { match } = this.props;
     axios
-      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${match.params.id}`)
+      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${match.params.id}`)
       .then((res) => {
         this.setState({ project: res.data.data, isLoading: false });
       })
@@ -47,8 +45,10 @@ class Individual extends Component {
                   <sup>{this.state.project.projectProposer}</sup>
                   <br/><hr/><br/>
                   <i>{this.state.project.projectDetails}</i>
+                  <i>{this.state.project.financialDocumentation}</i>
                 </div>
                 <div className="card-content">
+                  <img url="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unenvironment.org%2Fpt-br%2Fnode%2F24047&psig=AOvVaw07bFdAWIUQDmmxtMOKvwGD&ust=1593019987332000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjF8Ya8mOoCFQAAAAAdAAAAABAD" />
                 </div>
                 <div className="card-action">
                   <button className="btn brown">
@@ -64,4 +64,4 @@ class Individual extends Component {
 
 
 
-export default Individual
+export default IndividualGroup
