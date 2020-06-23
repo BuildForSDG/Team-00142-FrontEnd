@@ -73,7 +73,7 @@ class Group extends Component {
 
     return (
       <div className="row">
-        <h3 className = "heading">Youth Based Projects</h3>
+        <h3 className = "heading">Group Based Projects</h3>
         <div className="col-md-3">{this.state.isLoading ? <div className="loader">Loading... </div> : projectList}</div>
       </div>
     )

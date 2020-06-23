@@ -34497,7 +34497,7 @@ class Group extends _react.Component {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h3", {
       className: "heading"
-    }, "Youth Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Group Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("div", {
       className: "loader"
@@ -35261,7 +35261,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53606" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54149" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
