@@ -34898,11 +34898,8 @@ class IndividualCommunity extends _react.Component {
   }
 
   componentDidMount() {
-    let {
-      match
-    } = this.props;
-
-    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${match.params.id}`).then(res => {
+    // let { match } = this.props;
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
         isLoading: false
@@ -34982,11 +34979,8 @@ class IndividualYouth extends _react.Component {
   }
 
   componentDidMount() {
-    let {
-      match
-    } = this.props;
-
-    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${match.params.id}`).then(res => {
+    // let { match } = this.props;
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
         isLoading: false
@@ -35066,11 +35060,8 @@ class IndividualYouth extends _react.Component {
   }
 
   componentDidMount() {
-    let {
-      match
-    } = this.props;
-
-    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${match.params.id}`).then(res => {
+    // let { match } = this.props;
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
         isLoading: false

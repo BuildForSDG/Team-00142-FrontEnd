@@ -14,9 +14,9 @@ class IndividualCommunity extends Component {
   }
 
   componentDidMount() {
-    let { match } = this.props;
+    // let { match } = this.props;
     axios
-      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${match.params.id}`)
+      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${this.props.match.params.id}`)
       .then((res) => {
         this.setState({ project: res.data.data, isLoading: false });
       })
