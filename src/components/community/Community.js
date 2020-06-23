@@ -8,6 +8,7 @@ const Community = () => {
   return (
     <div>
     <h1 className="center">Community Based Projects</h1>
+    
   <div className="row">
     
     <div className="col s3 m4">
