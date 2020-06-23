@@ -38,7 +38,7 @@ class IndividualCommunity extends Component {
               <span className="card-title"><h4>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
-                <img src="https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ" height="350"></img>
+                {/* <img src="https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ" height="350"></img> */}
                 </div>
                 <div className="card-content">
                   <h5 className="truncate">Assistance: {this.state.project.typeOfAssistanceRequired}</h5>

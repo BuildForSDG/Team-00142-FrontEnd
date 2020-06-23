@@ -48,7 +48,7 @@ class IndividualGroup extends Component {
                   <i>{this.state.project.financialDocumentation}</i>
                 </div>
                 <div className="card-content">
-                  <img url="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unenvironment.org%2Fpt-br%2Fnode%2F24047&psig=AOvVaw07bFdAWIUQDmmxtMOKvwGD&ust=1593019987332000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjF8Ya8mOoCFQAAAAAdAAAAABAD" />
+                  {/* <img url="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unenvironment.org%2Fpt-br%2Fnode%2F24047&psig=AOvVaw07bFdAWIUQDmmxtMOKvwGD&ust=1593019987332000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjF8Ya8mOoCFQAAAAAdAAAAABAD" /> */}
                 </div>
                 <div className="card-action">
                   <button className="btn brown">

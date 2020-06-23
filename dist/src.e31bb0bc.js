@@ -32413,15 +32413,7 @@ const NavBar = () => {
     to: "/projects"
   }, "Projects")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/register"
-  }, "Register")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "sass.html"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "material-icons left"
-  }, "search"), "Link with Left Icon")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    className: "waves-effect orange accent-1 btn"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "material-icons right"
-  }, "trending_up"), "Log in"))))), /*#__PURE__*/_react.default.createElement("ul", {
+  }, "Register")), /*#__PURE__*/_react.default.createElement("li", null), /*#__PURE__*/_react.default.createElement("li", null)))), /*#__PURE__*/_react.default.createElement("ul", {
     className: "sidenav",
     id: "mobile-demo"
   }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
@@ -34388,8 +34380,8 @@ class Community extends _react.Component {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: `/individualCommunity/${item.id}`,
-        className: "blue-text"
-      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
+        className: "btn btn-info"
+      }, "DETAILS"), "\xA0", /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
         className: "material-icons"
@@ -34489,9 +34481,9 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: `/individualGroup/${item.id}`,
-        className: "blue-text"
-      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
+        to: `/individualCommunity/${item.id}`,
+        className: "btn btn-info"
+      }, "DETAILS"), "\xA0", /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
         className: "material-icons "
@@ -34592,9 +34584,9 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: `/individualYouth/${item.id}`,
-        className: "blue-text"
-      }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
+        to: `/individualCommunity/${item.id}`,
+        className: "btn btn-info"
+      }, "DETAILS"), "\xA0", /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
         className: "material-icons "
@@ -34941,10 +34933,7 @@ class IndividualCommunity extends _react.Component {
       className: "card center"
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card-image"
-    }, /*#__PURE__*/_react.default.createElement("img", {
-      src: "https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ",
-      height: "350"
-    })), /*#__PURE__*/_react.default.createElement("div", {
+    }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
     }, /*#__PURE__*/_react.default.createElement("h5", {
       className: "truncate"
@@ -35036,9 +35025,7 @@ class IndividualGroup extends _react.Component {
       className: "truncate"
     }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.financialDocumentation)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("img", {
-      url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unenvironment.org%2Fpt-br%2Fnode%2F24047&psig=AOvVaw07bFdAWIUQDmmxtMOKvwGD&ust=1593019987332000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjF8Ya8mOoCFQAAAAAdAAAAABAD"
-    })), /*#__PURE__*/_react.default.createElement("div", {
+    }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "btn brown"
@@ -35274,7 +35261,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50793" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
