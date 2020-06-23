@@ -1,0 +1,3 @@
+// export const SEARCH_PROJECTS = 'SEARCH_PROJECTS';
+// export const GET_COMMUNITY_PROJECTS = 'GET_COMMUNITY_PROJECTS';
+// export const SET_LOADING = 'SET_LOADING';

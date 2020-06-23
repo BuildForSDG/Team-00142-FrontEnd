@@ -31,7 +31,7 @@ const NavBar = () => {
             
             </li>
             <li>
-            <a class="waves-effect orange accent-1 btn"><i class="material-icons right">trending_up</i>Log in</a>
+            <a class="waves-effect orange accent-1 btn"><i class="material-icons right">trending_up</i>Login</a>
             </li>
           </ul>
         </div>

@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
+
+
 const Community = () => {
+
+  
   return (
     <div>
     <h1 className="center">Community Based Projects</h1>
