@@ -12,7 +12,7 @@ class IndividualYouth extends Component {
   }
 
   componentDidMount() {
-    const { match } = this.props;
+    let { match } = this.props;
     axios
       .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${match.params.id}`)
       .then((res) => {
