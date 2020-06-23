@@ -35110,14 +35110,23 @@ class Individual extends _react.Component {
     const {
       match
     } = this.props;
-    (0, _axios.default)(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => this.setState({
-      project: res.data,
-      isLoading: false
-    }));
+
+    _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => {
+      this.setState({
+        project: res.data,
+        isLoading: false
+      });
+    }).catch(error => {
+      console.log(error);
+    });
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement("div", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", null, "Loading...") : this.state.project.projectName);
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "container-fluid"
+    }, /*#__PURE__*/_react.default.createElement("h3", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+      className: "loader"
+    }, "Loading...") : this.state.projectName));
   } // render() {
   // return (
   //   <div className="cont container-fluid center">

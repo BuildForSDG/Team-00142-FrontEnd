@@ -16,15 +16,20 @@ class Individual extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    axios(
-      `https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`
-    ).then(res => this.setState({ project: res.data, isLoading: false }));
+    axios
+    .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`)
+      .then((res) => {
+        this.setState({ project: res.data, isLoading: false });
+      }) 
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
     return (
-      <div>
-        {this.state.isLoading ? <p>Loading...</p> : this.state.project.projectName}
+      <div className="container-fluid">
+        <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.projectName}</h3>
       </div>
     );
   }
