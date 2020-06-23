@@ -8,21 +8,21 @@ class Group extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: [], 
+      projects: [],
       isLoading: true
     };
   }
 
   componentDidMount() {
     this._isMount = true;
-    this.getGroupProjects();
+    this.getYouthProjects();
   }
 
   componentWillUnmount(){
     this._isMount = false;
   }
 
-  async getGroupProjects () {
+  async getYouthProjects() {
     axios
     .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail')
       .then((res) => {
@@ -42,7 +42,6 @@ class Group extends Component {
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
-                  {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
                 </div>
                 <div className="card-content">
                   <h5 className="truncate">Assistance: {item.typeOfAssistanceRequired}</h5>
@@ -56,8 +55,8 @@ class Group extends Component {
                 <div className="card-content">
                 </div>
                 <div className="card-action">
-                <Link to="/individual" href="#" className="blue-text">READ</Link>
-                  {/* <a href="#" className="blue-text">READ</a> */}
+                <Link to={`/individualGroup/${item.id}`} className="btn btn-info">DETAILS</Link>
+                &nbsp;
                   <button className="btn waves-effect waves-light blue-grey right">
                     <i className="material-icons ">share</i>
                   </button>

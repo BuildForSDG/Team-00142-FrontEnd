@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-
-// const Individual = () => {
   
-class Individual extends Component {
+class IndividualYouth extends Component {
 
   constructor(props) {
     super(props);
@@ -14,9 +12,9 @@ class Individual extends Component {
   }
 
   componentDidMount() {
-    const { match } = this.props;
+    // let { match } = this.props;
     axios
-      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${match.params.id}`)
+      .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${this.props.match.params.id}`)
       .then((res) => {
         this.setState({ project: res.data.data, isLoading: false });
       })
@@ -64,4 +62,4 @@ class Individual extends Component {
 
 
 
-export default Individual
+export default IndividualYouth

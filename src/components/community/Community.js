@@ -66,7 +66,7 @@ export default class Community extends Component {
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
-                  {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
+                  
                 </div>
                 <div className="card-content">
                   <h5 className="truncate">Assistance: {item.typeOfAssistanceRequired}</h5>
@@ -81,9 +81,8 @@ export default class Community extends Component {
                 </div>
                 <div className="card-action">
 
-                <Link to={`/individual/${item.id}`} className="blue-text">DETAILS</Link>
-
-                {/* <button className="btn btn-info" onClick={this.getIndividualProject.bind(item.id)}>DETAILS</button> */}
+                <Link to={`/individualCommunity/${item.id}`} className="btn btn-info">DETAILS</Link>
+                &nbsp;
                   <button className="btn waves-effect waves-light blue-grey right">
                     <i className="material-icons">share</i>
                   </button>
