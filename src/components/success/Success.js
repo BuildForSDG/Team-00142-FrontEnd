@@ -3,9 +3,10 @@ import Riser from '../layout/Riser'
 
 const Success = () => {
   return (
-    <div>
+    <div >
       <h1 className="center">Our Success Stories</h1>
-      <div className="row">
+      <div className="cont container-fluid">
+      <div  className="row">
         <div className="col s3 m4">
           <div className="card">
             <div className="card-image">
@@ -64,11 +65,12 @@ const Success = () => {
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col s12 m7 center">
+      </div>
+      <div className="card center">
+        <div className="col s12 m7">
           <div className="card">
-            <div className="card-content">
-              <i className="material-icons center">mail</i>
+            <div className="card-content ">
+              <i className="material-icons ">mail</i>
               <span className="card-title">
                 <h5>Subscribe To Our Newsletter</h5>
               </span>
@@ -86,7 +88,7 @@ const Success = () => {
             <div className="row">
               <div className="col 4 s3">
                 <h5 className="white-text">Footer Content</h5>
-                <a className="white-text"><Riser/></a>
+                {/* <a className="white-text"><Riser/></a> */}
                 <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
               <div className="col 4 s3">
@@ -118,6 +120,10 @@ const Success = () => {
                   
                 </ul>
               </div>
+              <br />
+              <div className="row">
+              <a className="white-text"><Riser/></a>
+                </div>
             </div>
           </div>
           <div className="footer-copyright">

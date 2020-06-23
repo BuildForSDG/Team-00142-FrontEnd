@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 2.0;
+  background-color:#F9FBE7;
  
 }
 .header {
@@ -34,6 +35,9 @@ body {
   color: black;
   font-size: 19px;
   
+}
+.heading{
+  text-align: center;
 }
 
 
@@ -191,3 +195,8 @@ body {
     font-size: 32px;
   }
 }
+
+.cont {
+  margin: 40px;
+}
+

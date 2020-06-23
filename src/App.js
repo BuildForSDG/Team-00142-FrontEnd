@@ -11,14 +11,15 @@ import Projects from './components/pages/Projects';
 import Register from './components/pages/Register';
 
 
-// import AuthState from './context/auth/AuthState';
-// import AlertState from './context/alert/AlertState';
-import Login from './components/pages/Login';
-// import Alerts from './components/layout/Alerts';
 
-// import axios from 'axios';
+import Login from './components/pages/Login';
+
+
+
+import Individual from './components/pages/Individual';
 
 import './App.css';
+import './CustomStyle.css'
 import './slider-animations.css';
 
 const App = () => {
@@ -37,7 +38,13 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/register" component={Register} />
+
           <Route exact path="/login" component={Login} />
+
+          <Route exact path="/individual/:id" component={Individual} />
+          {/* <Route exact path="/login" component={Login} /> */}
+
+
         </Switch>
         
       </Fragment>

@@ -10,8 +10,12 @@ import '../../scss/style.css';
 
 const Register = () => {
   return (
+
     <div>
       <UsersForm />
+    <div className="cont container-fluid">
+      <h3>Please Register</h3>
+
     </div>
   );
 };
