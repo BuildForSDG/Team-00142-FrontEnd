@@ -34437,14 +34437,14 @@ class Group extends _react.Component {
 
   componentDidMount() {
     this._isMount = true;
-    this.getGroupProjects();
+    this.getYouthProjects();
   }
 
   componentWillUnmount() {
     this._isMount = false;
   }
 
-  async getGroupProjects() {
+  async getYouthProjects() {
     _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail').then(res => {
       this.setState({
         projects: res.data,
@@ -34481,7 +34481,7 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: `/individualCommunity/${item.id}`,
+        to: `/individualGroup/${item.id}`,
         className: "btn btn-info"
       }, "DETAILS"), "\xA0", /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
@@ -34497,7 +34497,7 @@ class Group extends _react.Component {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h3", {
       className: "heading"
-    }, "Group Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Youth Based Projects"), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-3"
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("div", {
       className: "loader"
@@ -34584,7 +34584,7 @@ class Group extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: `/individualCommunity/${item.id}`,
+        to: `/individualYouth/${item.id}`,
         className: "btn btn-info"
       }, "DETAILS"), "\xA0", /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
@@ -34972,7 +34972,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-class IndividualGroup extends _react.Component {
+class IndividualYouth extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35023,7 +35023,7 @@ class IndividualGroup extends _react.Component {
       className: "truncate"
     }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.financialDocumentation)), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
@@ -35036,7 +35036,7 @@ class IndividualGroup extends _react.Component {
 
 }
 
-var _default = IndividualGroup;
+var _default = IndividualYouth;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"components/youth/IndividualYouth.js":[function(require,module,exports) {
 "use strict";
