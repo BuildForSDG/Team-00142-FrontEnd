@@ -34347,21 +34347,19 @@ class Community extends _react.Component {
 
   componentWillUnMount() {
     this._isMount = false;
-  }
+  } // async getIndividualProject(id) {
+  //   this.getIndividualProject && this.getIndividualProject(id);
+  //   axios
+  //   .get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${id}')
+  //   .then(res => {
+  //     this.setState({projects: res.data});
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  //   alert('function test')
+  // }
 
-  async getIndividualProject(id) {
-    this.getIndividualProject && this.getIndividualProject(id);
-
-    _axios.default.get('https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/').then(res => {
-      this.setState({
-        projects: res.data
-      });
-    }).catch(error => {
-      console.log(error);
-    });
-
-    alert('function test');
-  }
 
   render() {
     let projectList = this.state.projects.map(item => {
@@ -34389,12 +34387,8 @@ class Community extends _react.Component {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/individual",
-        href: "#",
+        to: `/individual/${item.id}`,
         className: "blue-text"
-      }, "READ"), /*#__PURE__*/_react.default.createElement("button", {
-        className: "btn btn-info",
-        onClick: this.getIndividualProject.bind(item.id)
       }, "DETAILS"), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn waves-effect waves-light blue-grey right"
       }, /*#__PURE__*/_react.default.createElement("i", {
@@ -35094,12 +35088,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Spinner = _interopRequireDefault(require("react-bootstrap/Spinner"));
 
+var _axios = _interopRequireDefault(require("axios"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+// const Individual = () => {
 class Individual extends _react.Component {
   constructor(props) {
     super(props);
@@ -35113,15 +35110,16 @@ class Individual extends _react.Component {
     const {
       match
     } = this.props;
-    axios(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => this.setState({
-      project: res.data.data[0],
+    (0, _axios.default)(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`).then(res => this.setState({
+      project: res.data,
       isLoading: false
     }));
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement("div", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", null, "Loading...") : this.state.project.description);
-  } // return (
+    return /*#__PURE__*/_react.default.createElement("div", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", null, "Loading...") : this.state.project.projectName);
+  } // render() {
+  // return (
   //   <div className="cont container-fluid center">
   //   <div  className="row">
   //     <div className="col s3 m4">
@@ -35165,7 +35163,7 @@ class Individual extends _react.Component {
   //     <div className="col s3 m4">
   //       <div className="card">
   //         <div className="card-image">
-  //           {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
+  //           <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
   //         </div>
   //         <div className="card-content">
   //           <span className="card-title">
@@ -35180,24 +35178,23 @@ class Individual extends _react.Component {
   //             require little markup to use effectively.
   //           </p>
   //         </div>
-  //         <div className="card-action">
-  //           {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
+  //         <div className="card-action">            
   //         </div>
   //       </div>
   //     </div>
   //   </div>
-  //   <Spinner animation="grow" variant="info" >
+  //   {/* <Spinner animation="grow" variant="info" >
   //     <span className="sr-only">Loading...</span>
-  //   </Spinner>
+  //   </Spinner> */}
   //   </div>
-  // )
+  // )};
 
 
-} // export default Individual
+}
 
-
-exports.default = Individual;
-},{"react":"../node_modules/react/index.js","react-bootstrap/Spinner":"../node_modules/react-bootstrap/esm/Spinner.js"}],"App.css":[function(require,module,exports) {
+var _default = Individual;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-bootstrap/Spinner":"../node_modules/react-bootstrap/esm/Spinner.js","axios":"../node_modules/axios/index.js"}],"App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -35324,7 +35321,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57566" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64985" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

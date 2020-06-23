@@ -11,7 +11,7 @@ import Projects from './components/pages/Projects';
 import Register from './components/pages/Register';
 import Individual from './components/pages/Individual';
 import './App.css';
-import './CustomStyle.css';
+import './CustomStyle.css'
 import './slider-animations.css';
 
 const App = () => {

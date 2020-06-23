@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Spinner from 'react-bootstrap/Spinner'
+import axios from "axios";
 
-export default class Individual extends Component {
+// const Individual = () => {
+  
+class Individual extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,18 +18,18 @@ export default class Individual extends Component {
     const { match } = this.props;
     axios(
       `https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail?id=${match.params.id}`
-    ).then(res => this.setState({ project: res.data.data[0], isLoading: false }));
+    ).then(res => this.setState({ project: res.data, isLoading: false }));
   }
 
   render() {
     return (
       <div>
-        {this.state.isLoading ? <p>Loading...</p> : this.state.project.description}
+        {this.state.isLoading ? <p>Loading...</p> : this.state.project.projectName}
       </div>
     );
   }
 
-
+  // render() {
   // return (
   //   <div className="cont container-fluid center">
   //   <div  className="row">
@@ -70,7 +74,7 @@ export default class Individual extends Component {
   //     <div className="col s3 m4">
   //       <div className="card">
   //         <div className="card-image">
-  //           {/* <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img> */}
+  //           <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img>
   //         </div>
   //         <div className="card-content">
   //           <span className="card-title">
@@ -85,18 +89,16 @@ export default class Individual extends Component {
   //             require little markup to use effectively.
   //           </p>
   //         </div>
-  //         <div className="card-action">
-  //           {/* <button className="btn waves-effect waves-light blue darken-4">See More</button> */}
-            
+  //         <div className="card-action">            
   //         </div>
   //       </div>
   //     </div>
   //   </div>
-  //   <Spinner animation="grow" variant="info" >
+  //   {/* <Spinner animation="grow" variant="info" >
   //     <span className="sr-only">Loading...</span>
-  //   </Spinner>
+  //   </Spinner> */}
   //   </div>
-  // )
+  // )};
 }
 
-// export default Individual
+export default Individual
