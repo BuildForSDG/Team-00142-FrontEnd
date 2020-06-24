@@ -196,7 +196,14 @@ body {
   }
 }
 
+/* custom css*/
 .cont {
   margin: 40px;
+}
+
+.Ptitle{
+  color: #26a69a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
 }
 

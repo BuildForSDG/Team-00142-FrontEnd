@@ -34924,7 +34924,9 @@ class IndividualCommunity extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35005,7 +35007,9 @@ class IndividualYouth extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35086,7 +35090,9 @@ class IndividualYouth extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35252,7 +35258,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54149" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55408" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

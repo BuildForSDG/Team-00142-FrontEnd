@@ -35,7 +35,7 @@ class IndividualCommunity extends Component {
     <div className="cont container-fluid center" key={this.state.project.id}>        
           <div className="card">
             <div className="col s3 m4">
-              <span className="card-title"><h4>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
+            <span className="card-title"><h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
                 {/* <img src="https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ" height="350"></img> */}
