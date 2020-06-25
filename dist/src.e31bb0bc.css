@@ -299,10 +299,27 @@ body {
   margin: 40px;
 }
 
-.Ptitle{
+.Ptitle {
   color: #26a69a;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bolder;
+}
+
+.CustNav {
+  padding-right: 15px;
+}
+
+.aboutCont {
+  margin-left: 170px;
+}
+
+.teamM {
+  border-radius: 150px;
+  height: 200px;
+}
+
+.tTitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
