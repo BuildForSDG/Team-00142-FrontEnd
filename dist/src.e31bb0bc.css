@@ -310,7 +310,8 @@ body {
 }
 
 .aboutCont {
-  margin-left: 170px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .teamM {
@@ -318,8 +319,8 @@ body {
   height: 200px;
 }
 
-.tTitle {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.contentFont {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
