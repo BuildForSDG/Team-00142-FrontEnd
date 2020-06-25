@@ -34848,7 +34848,9 @@ const About = () => {
     alt: "george kariuki"
   }), /*#__PURE__*/_react.default.createElement("small", {
     className: "Ptitle"
-  }, "George Kariuki"), /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/GeorgeKariuki7205"
+  }, "George Kariuki")), /*#__PURE__*/_react.default.createElement("p", {
     className: "tTitle"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "https://github.com/GeorgeKariuki7205"
@@ -34858,7 +34860,9 @@ const About = () => {
     alt: "martin wachira"
   }), /*#__PURE__*/_react.default.createElement("small", {
     className: "Ptitle"
-  }, "Martin Wachira"), /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/martinwachira"
+  }, "Martin Wachira")), /*#__PURE__*/_react.default.createElement("p", {
     className: "tTitle"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "https://github.com/martinwachira"
@@ -35300,7 +35304,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61321" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65102" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

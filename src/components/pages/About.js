@@ -31,7 +31,7 @@ const About = () => {
               src="https://avatars3.githubusercontent.com/u/28981210?s=460&u=c8426938bd6ee8669f82c63b9d7806c6b445ac0d&v=4"
               alt="george kariuki"
             />
-            <small className="Ptitle">George Kariuki</small>
+            <small className="Ptitle"><a href="https://github.com/GeorgeKariuki7205">George Kariuki</a></small>
             <p className="tTitle">
               <a href="https://github.com/GeorgeKariuki7205">George</a>, who is the main back-end developer, is atively
               involved in creation of laravel api's ensuring that everything is working as expected. With his amazing
@@ -47,7 +47,7 @@ const About = () => {
               src="https://avatars0.githubusercontent.com/u/60017194?s=460&u=4f41dcda0eba3cc5f88d308526838dac6a5565fa&v=4"
               alt="martin wachira"
             />
-            <small className="Ptitle">Martin Wachira</small>
+            <small className="Ptitle"><a href="https://github.com/martinwachira">Martin Wachira</a></small>
             <p className="tTitle">
               <a href="https://github.com/martinwachira">Martin</a>, with his diversity, actively got involved in both
               back-end and front-end product development. He is the solo Full-stack developer on this amazing project.
