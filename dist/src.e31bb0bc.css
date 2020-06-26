@@ -294,8 +294,33 @@ body {
   }
 }
 
+/* custom css*/
 .cont {
   margin: 40px;
+}
+
+.Ptitle {
+  color: #26a69a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+}
+
+.CustNav {
+  padding-right: 15px;
+}
+
+.aboutCont {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.teamM {
+  border-radius: 150px;
+  height: 200px;
+}
+
+.contentFont {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 

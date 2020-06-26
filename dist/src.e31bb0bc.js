@@ -32390,8 +32390,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const NavBar = () => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "navbar",
-    style: divStyle
+    className: "navbar"
   }, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "nav-wrapper lime lighten-5"
   }, /*#__PURE__*/_react.default.createElement("a", {
@@ -32404,7 +32403,7 @@ const NavBar = () => {
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "material-icons"
   }, "menu")), /*#__PURE__*/_react.default.createElement("ul", {
-    className: "right hide-on-med-and-down"
+    className: "CustNav right hide-on-med-and-down"
   }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -32413,26 +32412,7 @@ const NavBar = () => {
     to: "/projects"
   }, "Projects")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/register"
-  }, "Register")), /*#__PURE__*/_react.default.createElement("li", null), /*#__PURE__*/_react.default.createElement("li", null)))), /*#__PURE__*/_react.default.createElement("ul", {
-    className: "sidenav",
-    id: "mobile-demo"
-  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "Home.html"
-  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "badges.html"
-  }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "collapsible.html"
-  }, "Projects")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "mobile.html"
-  }, "Register")), /*#__PURE__*/_react.default.createElement("a", {
-    href: "sass.html"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "material-icons left"
-  }, "search"), "Link with Left Icon"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    className: "waves-effect waves-light btn"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "material-icons left"
-  }, "cloud"), "Log in"))));
+  }, "Register"))))));
 };
 
 const divStyle = {// color: 'black',
@@ -34839,17 +34819,79 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _Header = _interopRequireDefault(require("../layout/Header"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const About = () => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "cont container-fluid"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "About this App"), /*#__PURE__*/_react.default.createElement("p", null, "Version 1.0.0"));
+    className: "aboutCont card"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "contentFont"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col s3 m4"
+  }, /*#__PURE__*/_react.default.createElement("h3", {
+    className: "Ptitle"
+  }, /*#__PURE__*/_react.default.createElement("u", {
+    className: "card-title"
+  }, "About")), /*#__PURE__*/_react.default.createElement("h5", null, "Riser Africa"), "was a brainchild idea of this five amazing developers. ", /*#__PURE__*/_react.default.createElement("small", null, "=>"), " ", /*#__PURE__*/_react.default.createElement("br", null), "As an SDG Goal, the \"5 muskateers\" unanimously decided that No Poverty goal, problem statement 2, was the best and that it would address every members' vision and ideas. From this solid foundation, they all sat and figured out the best way to achieve this goal. That is when Riser Africa was thought and put down into idealization and actualization.", ' ', /*#__PURE__*/_react.default.createElement("em", null, "Basically"), ", Riser Africa, is a web forum app, that allows project owners of any kind from atmost the marginalised areas of the country, upload and state their project ideas with the hope of attracting an investor. Thanks to this amazing system, that the project owners are connected with investors who believe and are interested in their idea, and from that, guesse what, the project gets funded. Isn't this an absolute nice way of conquering poverty?"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col s3 m8"
+  }, /*#__PURE__*/_react.default.createElement("h3", {
+    className: "Ptitle"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-title"
+  }, "Development Team")), /*#__PURE__*/_react.default.createElement("img", {
+    className: "teamM",
+    src: "https://avatars3.githubusercontent.com/u/28981210?s=460&u=c8426938bd6ee8669f82c63b9d7806c6b445ac0d&v=4",
+    alt: "george kariuki"
+  }), /*#__PURE__*/_react.default.createElement("small", {
+    className: "Ptitle"
+  }, "George Kariuki"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "tTitle"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/GeorgeKariuki7205"
+  }, "George"), ", who is the main back-end developer, is atively involved in creation of laravel api's ensuring that everything is working as expected. With his amazing profiency in laravel, he was able to setup boiler plate for the backend team as well as the CI/CD for the app, to ensure that it runs smoothly without a challenge. Together with Martin, they ensures that the api's are always kept up to date to ensure correct and data consistency."), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("img", {
+    className: "teamM",
+    src: "https://avatars0.githubusercontent.com/u/60017194?s=460&u=4f41dcda0eba3cc5f88d308526838dac6a5565fa&v=4",
+    alt: "martin wachira"
+  }), /*#__PURE__*/_react.default.createElement("small", {
+    className: "Ptitle"
+  }, "Martin Wachira"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "tTitle"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/martinwachira"
+  }, "Martin"), ", with his diversity, actively got involved in both back-end and front-end product development. He is the solo Full-stack developer on this amazing project. With quite handful knowledge in Laravel, together with the backend team, he actively takes part in the development of project api's. He also works hand in hand with the frontend team to ensure that the UI/UX of the site is amazing and appealing using React framework for the same."), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("img", {
+    className: "teamM",
+    src: "https://media-exp1.licdn.com/dms/image/C4D03AQFazXhDRNJYCA/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=_gbFisRs7uoEqHHmGeeWK4yZS4g0VwZ-1XNHt69T3cY",
+    alt: "joseph"
+  }), /*#__PURE__*/_react.default.createElement("small", {
+    className: "Ptitle"
+  }, "Joseph Chiuri"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "tTitle"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/Chiuri254"
+  }, "Joseph"), ", the main front-end guy, actively took part in the setting up the boiler plate for react, designing and creating necessary components for the project. His main being react, was very crucial for this project."), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("img", {
+    className: "teamM",
+    src: "https://avatars1.githubusercontent.com/u/37038018?s=460&u=81d0940a792fd53ab6951130d73d8280416654b6&v=4",
+    alt: "wilson"
+  }), /*#__PURE__*/_react.default.createElement("small", {
+    className: "Ptitle"
+  }, "Wilson"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "tTitle"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://github.com/Wilson-Ochieng/"
+  }, "Wilson"), " took part in the front-end team."), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("small", {
+    className: "Ptitle"
+  }, "Carlos"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "tTitle"
+  }, "Carlos took part in the front-end team."), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null)))));
 };
 
 var _default = About;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/pages/Register.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../layout/Header":"components/layout/Header.js"}],"components/pages/Register.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34924,7 +34966,9 @@ class IndividualCommunity extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35005,7 +35049,9 @@ class IndividualYouth extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35086,7 +35132,9 @@ class IndividualYouth extends _react.Component {
       className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+    }, /*#__PURE__*/_react.default.createElement("h4", {
+      className: "Ptitle"
+    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
       className: "card center"
@@ -35252,7 +35300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54149" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61321" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

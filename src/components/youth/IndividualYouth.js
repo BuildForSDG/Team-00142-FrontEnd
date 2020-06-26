@@ -33,7 +33,7 @@ class IndividualYouth extends Component {
     <div className="cont container-fluid center" key={this.state.project.id}>        
           <div className="card">
             <div className="col s3 m4">
-              <span className="card-title"><h4>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
+              <span className="card-title"><h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
                 </div>
