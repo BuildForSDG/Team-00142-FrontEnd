@@ -66,14 +66,16 @@ export default class Community extends Component {
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
               <div className="card center">
                 <div className="card-image">
-                  
+                {/* <img src={"https://riserafrica.georgekprojects.tk"+item.projectProposerImage}/> */}
+                {/* <img src={"https://riserafrica.georgekprojects.tk"+item.projectLocationImage}/> */}
+                   {/* {item.projectProposer} */}
                 </div>
                 <div className="card-content">
                   <h5 className="truncate">Assistance: {item.typeOfAssistanceRequired}</h5>
                   <p className="truncate">Type: {item.typeOfProject}</p>
                   <sup>Demographic - {item.projectDemographic}</sup>
                   <br/>
-                  <sup>{item.projectProposer}</sup>
+                  {/* <sup>{item.projectLocationImage}</sup> */}
                   <br/><hr/><br/>
                   <i>{item.projectDetails}</i>
                 </div>

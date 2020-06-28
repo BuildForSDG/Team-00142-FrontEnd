@@ -34354,7 +34354,7 @@ class Community extends _react.Component {
         className: "truncate"
       }, "Assistance: ", item.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
         className: "truncate"
-      }, "Type: ", item.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", item.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, item.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, item.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+      }, "Type: ", item.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", item.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, item.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-content"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "card-action"
@@ -34933,7 +34933,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-// const Individual = () => {
 class IndividualCommunity extends _react.Component {
   constructor(props) {
     super(props);
@@ -34944,7 +34943,6 @@ class IndividualCommunity extends _react.Component {
   }
 
   componentDidMount() {
-    // let { match } = this.props;
     _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/1/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
@@ -34956,18 +34954,11 @@ class IndividualCommunity extends _react.Component {
   }
 
   render() {
-    // return (
-    //   <div className="container-fluid">
-    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
-    //   </div>
-    // );
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "cont container-fluid center",
       key: this.state.project.id
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
     }, /*#__PURE__*/_react.default.createElement("h4", {
@@ -34975,24 +34966,35 @@ class IndividualCommunity extends _react.Component {
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
+      className: "row card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m2"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+      height: "160"
+    }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m10"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "center"
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card-image"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
+    }, /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
     }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
+    }))), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk/api/photo" + this.state.project.projectLocationImage
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "btn brown"
     }, /*#__PURE__*/_react.default.createElement("i", {
       className: "material-icons"
-    }, "favorite")))))));
+    }, "favorite"))))));
   }
 
 }
@@ -35017,7 +35019,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-class IndividualYouth extends _react.Component {
+class IndividualGroup extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35027,7 +35029,6 @@ class IndividualYouth extends _react.Component {
   }
 
   componentDidMount() {
-    // let { match } = this.props;
     _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/2/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
@@ -35039,18 +35040,11 @@ class IndividualYouth extends _react.Component {
   }
 
   render() {
-    // return (
-    //   <div className="container-fluid">
-    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
-    //   </div>
-    // );
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "cont container-fluid center",
       key: this.state.project.id
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
     }, /*#__PURE__*/_react.default.createElement("h4", {
@@ -35058,29 +35052,40 @@ class IndividualYouth extends _react.Component {
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
+      className: "row card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m2"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+      height: "160"
+    }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m10"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "center"
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card-image"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
+    }, /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
     }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
+    }))), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk/api/photo" + this.state.project.projectLocationImage
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "btn brown"
     }, /*#__PURE__*/_react.default.createElement("i", {
       className: "material-icons"
-    }, "favorite")))))));
+    }, "favorite"))))));
   }
 
 }
 
-var _default = IndividualYouth;
+var _default = IndividualGroup;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"components/youth/IndividualYouth.js":[function(require,module,exports) {
 "use strict";
@@ -35110,7 +35115,6 @@ class IndividualYouth extends _react.Component {
   }
 
   componentDidMount() {
-    // let { match } = this.props;
     _axios.default.get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${this.props.match.params.id}`).then(res => {
       this.setState({
         project: res.data.data,
@@ -35122,18 +35126,11 @@ class IndividualYouth extends _react.Component {
   }
 
   render() {
-    // return (
-    //   <div className="container-fluid">
-    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
-    //   </div>
-    // );
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "cont container-fluid center",
       key: this.state.project.id
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
     }, /*#__PURE__*/_react.default.createElement("h4", {
@@ -35141,24 +35138,35 @@ class IndividualYouth extends _react.Component {
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
+      className: "row card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m2"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+      height: "160"
+    }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m10"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "center"
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card-image"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
+    }, /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
     }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
+    }))), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk/api/photo" + this.state.project.projectLocationImage
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "btn brown"
     }, /*#__PURE__*/_react.default.createElement("i", {
       className: "material-icons"
-    }, "favorite")))))));
+    }, "favorite"))))));
   }
 
 }
@@ -35304,7 +35312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65102" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53309" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

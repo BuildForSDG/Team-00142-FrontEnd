@@ -12,7 +12,6 @@ class IndividualYouth extends Component {
   }
 
   componentDidMount() {
-    // let { match } = this.props;
     axios
       .get(`https://riserafrica.georgekprojects.tk/api/typeOfProjects/3/projectDetail/${this.props.match.params.id}`)
       .then((res) => {
@@ -24,36 +23,48 @@ class IndividualYouth extends Component {
   }
 
   render() {
-    // return (
-    //   <div className="container-fluid">
-    //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
-    //   </div>
-    // );
   return (
     <div className="cont container-fluid center" key={this.state.project.id}>        
           <div className="card">
-            <div className="col s3 m4">
-              <span className="card-title"><h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
-              <div className="card center">
+            {/* <div className="col s3 m4"> */}             
+            <span className="card-title">
+              <h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}
+              </h4>by Riser Africa              
+              </span>
+              <div className="row card">
+              <div className="col m2">
+                <img src={"https://riserafrica.georgekprojects.tk"+this.state.project.projectProposerImage} height="160"/><sup>{this.state.project.projectProposer}</sup>
+                </div>
+              <div className="col m10">
+              <div className="center">
                 <div className="card-image">
+                {/* <img src={"https://riserafrica.georgekprojects.tk"+this.state.locationOfPicture}/> */}
+                {/* <img src="https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/undersown_surpress_weeds.jpg?itok=7aMv1aWJ" height="350"></img> */}
                 </div>
                 <div className="card-content">
-                  <h5 className="truncate">Assistance: {this.state.project.typeOfAssistanceRequired}</h5>
+                  <p className="truncate">Assistance: {this.state.project.typeOfAssistanceRequired}</p>
                   <p className="truncate">Type: {this.state.project.typeOfProject}</p>
                   <sup>Demographic - {this.state.project.projectDemographic}</sup>
                   <br/>
-                  <sup>{this.state.project.projectProposer}</sup>
-                  <br/><hr/><br/>
-                  <i>{this.state.project.projectDetails}</i>
+                  <h5><b>Project Description</b></h5>
+                  <p>
+                    {this.state.project.projectDetails}
+                  </p>
+                  <br/>
+                  <br/><br/>                  
                 </div>
                 <div className="card-content">
+                </div>                
                 </div>
-                <div className="card-action">
+              </div>
+              <i>Project Images Here...</i>
+                  <img src={"https://riserafrica.georgekprojects.tk/api/photo"+this.state.project.projectLocationImage}/>
+                  <div className="card-action">
                   <button className="btn brown">
                     <i className="material-icons" >favorite</i>
                   </button>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
