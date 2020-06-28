@@ -7,10 +7,6 @@ import UsersForm from '../form/UsersForm';
 import axios from 'axios';
 
 
-//  class Register extends Component {
-//    result = (values) => {
-//      console.log('results is', values);
-//    }
 class Register extends Component {
   result = (values) => {
     console.log('results is', values);  
