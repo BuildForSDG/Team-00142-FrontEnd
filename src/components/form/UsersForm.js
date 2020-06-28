@@ -21,7 +21,18 @@ class UsersForm extends Component {
       ]
     };
   }
-
+  // submitHandler = () =>{
+      
+  //       console.log(this.onSubmit);   
+  //       axios.post('https://riserafrica.georgekprojects.tk/api/phaseOne', this.onSubmit)
+  //        .then(response => {
+  //          console.log(response)
+  //        })
+  //        .catch(error => {
+  //          console.log(error)
+  //        })
+  //     }
+  
   nextPage() {
     this.setState({ page: this.state.page + 1 });
   }

@@ -6,7 +6,7 @@ const validate = (values) => {
 
   if (!values.phone) {
     errors.phone = 'MobileNumber Required';
-  } else if (values.phone && !/^([6-9]\d{9})$/i.test(values.phone)) {
+  } else if (values.phone && !/^([2-9]\d{9})$/i.test(values.phone)) {
     errors.phone = 'Invalid mobile number, must be 10 digits';
   }
 

@@ -91,7 +91,7 @@ const NomineeDetailsForm = (props) => {
             </FormGroup>
             <FormGroup row>
               <Col xs="12" lg="6">
-                <Label htmlFor="textarea-input">Comments</Label>
+                <Label htmlFor="textarea-input">Projects Description</Label>
               </Col>
               <Col xs="12" lg="12">
                 <Input
@@ -109,8 +109,8 @@ const NomineeDetailsForm = (props) => {
               <i className="fa fa-chevron-left" />
                 &nbsp; Previous
             </Button>
-            <Button color="primary" className="btn-pill pull-right" type="submit" style={{marginRight: '20px'}} disabled={pristine || submitting}>
-               Save &nbsp;
+            <Button color="primary" className="btn-pill pull-right" type="submit" style={{marginRight: '20px'}} >
+               Submit
               <i className="fa fa-check" />
             </Button>
           </div>

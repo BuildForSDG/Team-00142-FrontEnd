@@ -1,10 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
+
 import validate from '../../validation/validation';
 import FormInput from '../formInput/FormInput';
-import { mobile, captialize, age } from '../../validation/normalize';
-import { Button, Card, CardBody, Col, FormGroup } from 'reactstrap';
+import {
+  mobile,
+  captialize,
+  age
+} from '../../validation/normalize';
+import {
+  Button,
+  Card,
+  CardBody,
+  Col,
+  FormGroup
+} from 'reactstrap';
+
 
 const GeneralForm = (props) => {
   const { handleSubmit } = props;
@@ -14,11 +26,11 @@ const GeneralForm = (props) => {
         <Card className="card-border">
           <CardBody>
             <Field
-              name="name"
+              name="projectName"
               type="text"
               component={FormInput}
-              label="Name *"
-              inputPlaceHolder="Enter Name"
+              label=" Project Name *"
+              inputPlaceHolder="Enter Project Name"
               normalize={captialize}
             />
             <FormGroup row>
@@ -27,17 +39,17 @@ const GeneralForm = (props) => {
                   name="fatherName"
                   type="text"
                   component={FormInput}
-                  label="FatherName"
-                  inputPlaceHolder="Enter Father Name"
+                  label="Type Of Project"
+                  inputPlaceHolder="Enter Type Of Project i.e Group/Community"
                   normalize={captialize}
                 />
               </Col>
               <Col xs="12" lg="6">
                 <Field
-                  name="phone"
+                  name="phoneNumber"
                   type="text"
                   component={FormInput}
-                  label="Mobile No *"
+                  label=" PhoneNumber*"
                   inputPlaceHolder="+254"
                   normalize={mobile}
                 />
@@ -45,7 +57,12 @@ const GeneralForm = (props) => {
             </FormGroup>
             <FormGroup row>
               <Col xs="12" lg="6">
-                <Field name="dob" type="date" component={FormInput} label="Date of Birth" />
+                <Field
+                  name="dob"
+                  type="date"
+                  component={FormInput}
+                  label="Date of Birth"
+                />
               </Col>
 
               <Col xs="12" lg="6">
@@ -61,8 +78,8 @@ const GeneralForm = (props) => {
             </FormGroup>
           </CardBody>
           <div style={{ paddingBottom: 30 }}>
-            <Button color="primary" className="btn-pill pull-right" type="submit" style={{ marginRight: '20px' }}>
-              Next &nbsp;
+            <Button color="primary" className="btn-pill pull-right" type="submit" style={{marginRight: '20px'}}>
+               Next &nbsp;
               <i className="fa fa-chevron-right" />
             </Button>
           </div>

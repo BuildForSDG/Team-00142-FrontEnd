@@ -1,44 +1,51 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+// import React, { Component } from 'react';
+// import axios from 'axios';
 
-class PostForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      userId: '',
+// export class PostForm extends Component {
+//   state = {
+//       phoneNumber: '',
+//       email: '',
+//       nationalId: '',
+//       name: '',
+//       photo: '',
+//       projectName: '',
+//       type_of_projects_id: '',
+//       projectDemographicId: '',
+//       typeOfAssistanceRequiredId: '',
+//       userId: ''
       
-    };
-  }
+//     };
+  
 
-  changeHandler = (e) => {
-    this.setState({[e.target.name]: e.target.value })
-  }
+//     handleChange = (e) => {
+//     this.setState({[e.target.name]: e.target.value })
+//   }
 
-  submitHandler = e =>{
-    e.preventDefault()
-    console.log(this.state);   
-    axios.post('https://riserafrica.georgekprojects.tk/api/phaseOne', this.state)
-     .then(response => {
-       console.log(response)
-     })
-     .catch(error => {
-       console.log(error)
-     })
-  }
-  render() {
-    const { userId } = this.state;
-    return (
-      <div>
-        <form onSubmit={this.submitHandler}>
+//   submitHandler = e =>{
+//     e.preventDefault()
+//     console.log(this.state);   
+//     axios.post('https://riserafrica.georgekprojects.tk/api/phaseOne', this.state)
+//      .then(response => {
+//        console.log(response)
+//      })
+//      .catch(error => {
+//        console.log(error)
+//      })
+//   }
+//   render() {
+//     const {  phoneNumber,email,nationalId,name, photo , projectName, type_of_projects_id,projectDemographicId,typeOfAssistanceRequiredId} = this.state;
+//     const values ={ phoneNumber,email,nationalId,name, photo , projectName, type_of_projects_id,projectDemographicId,typeOfAssistanceRequiredId};
+//     return (
+//       <div>
+//         <form onSubmit={this.submitHandler}>
 
-        <input type="text" name="userId" value={userId} onchange={this.changeHandler} />
-        <button type="submit">Submit</button>
-        </form>
+//         <input type="text" name="userId" value={userId} onchange={this.changeHandler} />
+//         <button type="submit">Submit</button>
+//         </form>
         
-      </div>
-    );
-  }
-}
+//       </div>
+//     );
+//   }
+// }
 
-export default PostForm;
+// export default PostForm;
