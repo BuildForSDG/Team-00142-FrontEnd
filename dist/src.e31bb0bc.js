@@ -34992,7 +34992,13 @@ class IndividualCommunity extends _react.Component {
       className: "card-content"
     })))), /*#__PURE__*/_react.default.createElement("div", {
       className: "row"
-    }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+    }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("div", {
+      className: "center"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "row"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m10 offset-m1"
+    }, /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails)))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
       className: "row"
     }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Supporting Documents")), /*#__PURE__*/_react.default.createElement("a", {
       href: "https://riserafrica.georgekprojects.tk" + this.state.project.financialDocumentation,
@@ -35009,15 +35015,15 @@ class IndividualCommunity extends _react.Component {
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "center"
     }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col md4"
+      className: "col md2 offset-m1"
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"
     })), /*#__PURE__*/_react.default.createElement("div", {
-      className: "col md4"
+      className: "col md2 offset-m1"
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"
     })), /*#__PURE__*/_react.default.createElement("div", {
-      className: "col md4 offset1"
+      className: "col md2 offset-m1"
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"
     })))), /*#__PURE__*/_react.default.createElement("div", {
@@ -35141,7 +35147,13 @@ class IndividualYouth extends _react.Component {
         className: "card-content"
       })))), /*#__PURE__*/_react.default.createElement("div", {
         className: "row"
-      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "center"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col m10 offset-m1"
+      }, /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails)))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
         className: "row"
       }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Supporting Documents")), /*#__PURE__*/_react.default.createElement("a", {
         href: "https://riserafrica.georgekprojects.tk" + this.state.project.financialDocumentation,
@@ -35158,15 +35170,15 @@ class IndividualYouth extends _react.Component {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "center"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "col md4"
+        className: "col md2 offset-m1"
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"
       })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "col md4"
+        className: "col md2 offset-m1"
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"
       })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "col md4 offset1"
+        className: "col md2 offset-m1"
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"
       })))), /*#__PURE__*/_react.default.createElement("div", {
