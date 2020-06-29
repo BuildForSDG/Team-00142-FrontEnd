@@ -34285,6 +34285,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 // import M from 'materialize-css/dist/js/materialize.min.js';
 class Community extends _react.Component {
+  // var url = "http://riserafricaapp.georgekprojects.tk"
   constructor(props) {
     super(props);
     this.state = {
@@ -34962,8 +34963,6 @@ class IndividualCommunity extends _react.Component {
       key: this.state.project.id
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "card-title"
     }, /*#__PURE__*/_react.default.createElement("h4", {
@@ -34971,24 +34970,63 @@ class IndividualCommunity extends _react.Component {
     }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
       className: "loader"
     }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
+      className: "row card"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m2"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+      height: "160"
+    }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col m10"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: ""
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "card-image"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
+    }, /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
     }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
       className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-content"
-    }), /*#__PURE__*/_react.default.createElement("div", {
+    })))), /*#__PURE__*/_react.default.createElement("div", {
+      className: "row"
+    }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "row"
+    }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Supporting Documents")), /*#__PURE__*/_react.default.createElement("a", {
+      href: "https://riserafrica.georgekprojects.tk" + this.state.project.financialDocumentation,
+      download: true
+    }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+    }), "Click To Download Business Case"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("a", {
+      href: "https://riserafrica.georgekprojects.tk" + this.state.project.businessCaeDocumentation,
+      download: true
+    }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+    }), " Click To Download Financial Breakdown"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+      className: "row"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "center"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "col md4"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col md4"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col md4 offset1"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"
+    })))), /*#__PURE__*/_react.default.createElement("div", {
       className: "card-action"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "btn brown"
     }, /*#__PURE__*/_react.default.createElement("i", {
       className: "material-icons"
-    }, "favorite")))))));
+    }, "favorite")))));
   }
 
 }
@@ -35300,7 +35338,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61321" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63964" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

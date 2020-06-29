@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import M from 'materialize-css/dist/js/materialize.min.js';
 
 export default class Community extends Component {
-  
+  // var url = "http://riserafricaapp.georgekprojects.tk"
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +60,10 @@ export default class Community extends Component {
     let projectList = this.state.projects.map((item) => {
 
       return (
-        <div className="cont container-fluid" key={item.id}>        
+        <div className="cont container-fluid" key={item.id}> 
+
+        {/* <img src={"https://riserafrica.georgekprojects.tk"+item.projectProposerImage}/>         */}
+        {/* <p>{"http://riserafrica.georgekprojects.tk"+item.projectProposerImage}</p> */}
           <div className="card">
             <div className="col s3 m4">
               <span className="card-title"><h4>{item.projectName}</h4>by Riser Africa</span>
