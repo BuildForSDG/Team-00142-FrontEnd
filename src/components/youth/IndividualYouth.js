@@ -85,9 +85,17 @@ class IndividualYouth extends Component {
                 </div>
                 <div className="row">
                 <h5><b>Project Description</b></h5>
+                <div className="center">
+                <div className="row">
+                  
+                  <div className="col m10 offset-m1">
                   <p>
                     {this.state.project.projectDetails}
                   </p>
+                  </div>
+                  </div>
+                  </div>
+                  
                   <br/>
                   <br/><br/> 
                   </div>
@@ -107,13 +115,13 @@ class IndividualYouth extends Component {
               <br></br>
                   <div className="row">
                     <div className="center">
-                    <div className="col md4">
+                    <div className="col md2 offset-m1">
                     <img src = "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"/>
                     </div>
-                    <div className="col md4">
+                    <div className="col md2 offset-m1">
                     <img src = "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"/>
                     </div>
-                    <div className="col md4 offset1">
+                    <div className="col md2 offset-m1">
                     <img src = "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"/>
                     </div>
                     </div>                    
