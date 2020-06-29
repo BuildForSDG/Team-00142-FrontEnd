@@ -35078,38 +35078,105 @@ class IndividualYouth extends _react.Component {
     //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
     //   </div>
     // );
-    return /*#__PURE__*/_react.default.createElement("div", {
-      className: "cont container-fluid center",
-      key: this.state.project.id
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
-    }, /*#__PURE__*/_react.default.createElement("span", {
-      className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", {
-      className: "Ptitle"
-    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
-      className: "loader"
-    }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-image"
-    }), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
-      className: "truncate"
-    }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
-      className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-content"
-    }), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-action"
-    }, /*#__PURE__*/_react.default.createElement("button", {
-      className: "btn brown"
-    }, /*#__PURE__*/_react.default.createElement("i", {
-      className: "material-icons"
-    }, "favorite")))))));
+    return (
+      /*#__PURE__*/
+      // <div className="cont container-fluid center" key={this.state.project.id}>        
+      //       <div className="card">
+      //         <div className="col s3 m4">
+      //         <span className="card-title"><h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
+      //           <div className="card center">
+      //             <div className="card-image">
+      //             </div>
+      //             <div className="card-content">
+      //               <h5 className="truncate">Assistance: {this.state.project.typeOfAssistanceRequired}</h5>
+      //               <p className="truncate">Type: {this.state.project.typeOfProject}</p>
+      //               <sup>Demographic - {this.state.project.projectDemographic}</sup>
+      //               <br/>
+      //               <sup>{this.state.project.projectProposer}</sup>
+      //               <br/><hr/><br/>
+      //               <i>{this.state.project.projectDetails}</i>
+      //             </div>
+      //             <div className="card-content">
+      //             </div>
+      //             <div className="card-action">
+      //               <button className="btn brown">
+      //                 <i className="material-icons" >favorite</i>
+      //               </button>
+      //             </div>
+      //           </div>
+      //         </div>
+      //       </div>
+      //     </div>
+      _react.default.createElement("div", {
+        className: "cont container-fluid center",
+        key: this.state.project.id
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "card"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "card-title"
+      }, /*#__PURE__*/_react.default.createElement("h4", {
+        className: "Ptitle"
+      }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+        className: "loader"
+      }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row card"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col m2"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+        height: "160"
+      }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col m10"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: ""
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-image"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-content"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "truncate"
+      }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
+        className: "truncate"
+      }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-content"
+      })))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Supporting Documents")), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://riserafrica.georgekprojects.tk" + this.state.project.financialDocumentation,
+        download: true
+      }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+      }), "Click To Download Business Case"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://riserafrica.georgekprojects.tk" + this.state.project.businessCaeDocumentation,
+        download: true
+      }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+      }), " Click To Download Financial Breakdown"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "center"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4 offset1"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"
+      })))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-action"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "btn brown"
+      }, /*#__PURE__*/_react.default.createElement("i", {
+        className: "material-icons"
+      }, "favorite")))))
+    );
   }
 
 }
@@ -35161,38 +35228,105 @@ class IndividualYouth extends _react.Component {
     //     <h3>{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h3>
     //   </div>
     // );
-    return /*#__PURE__*/_react.default.createElement("div", {
-      className: "cont container-fluid center",
-      key: this.state.project.id
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col s3 m4"
-    }, /*#__PURE__*/_react.default.createElement("span", {
-      className: "card-title"
-    }, /*#__PURE__*/_react.default.createElement("h4", {
-      className: "Ptitle"
-    }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
-      className: "loader"
-    }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card center"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-image"
-    }), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-content"
-    }, /*#__PURE__*/_react.default.createElement("h5", {
-      className: "truncate"
-    }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
-      className: "truncate"
-    }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("i", null, this.state.project.projectDetails)), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-content"
-    }), /*#__PURE__*/_react.default.createElement("div", {
-      className: "card-action"
-    }, /*#__PURE__*/_react.default.createElement("button", {
-      className: "btn brown"
-    }, /*#__PURE__*/_react.default.createElement("i", {
-      className: "material-icons"
-    }, "favorite")))))));
+    return (
+      /*#__PURE__*/
+      // <div className="cont container-fluid center" key={this.state.project.id}>        
+      //       <div className="card">
+      //         <div className="col s3 m4">
+      //           <span className="card-title"><h4 className="Ptitle">{this.state.isLoading ? <p className="loader">Loading...</p> : this.state.project.projectName}</h4>by Riser Africa</span>
+      //           <div className="card center">
+      //             <div className="card-image">
+      //             </div>
+      //             <div className="card-content">
+      //               <h5 className="truncate">Assistance: {this.state.project.typeOfAssistanceRequired}</h5>
+      //               <p className="truncate">Type: {this.state.project.typeOfProject}</p>
+      //               <sup>Demographic - {this.state.project.projectDemographic}</sup>
+      //               <br/>
+      //               <sup>{this.state.project.projectProposer}</sup>
+      //               <br/><hr/><br/>
+      //               <i>{this.state.project.projectDetails}</i>
+      //             </div>
+      //             <div className="card-content">
+      //             </div>
+      //             <div className="card-action">
+      //               <button className="btn brown">
+      //                 <i className="material-icons" >favorite</i>
+      //               </button>
+      //             </div>
+      //           </div>
+      //         </div>
+      //       </div>
+      //     </div>
+      _react.default.createElement("div", {
+        className: "cont container-fluid center",
+        key: this.state.project.id
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "card"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "card-title"
+      }, /*#__PURE__*/_react.default.createElement("h4", {
+        className: "Ptitle"
+      }, this.state.isLoading ? /*#__PURE__*/_react.default.createElement("p", {
+        className: "loader"
+      }, "Loading...") : this.state.project.projectName), "by Riser Africa"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row card"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col m2"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://riserafrica.georgekprojects.tk" + this.state.project.projectProposerImage,
+        height: "160"
+      }), /*#__PURE__*/_react.default.createElement("sup", null, this.state.project.projectProposer)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col m10"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: ""
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-image"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-content"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "truncate"
+      }, "Assistance: ", this.state.project.typeOfAssistanceRequired), /*#__PURE__*/_react.default.createElement("p", {
+        className: "truncate"
+      }, "Type: ", this.state.project.typeOfProject), /*#__PURE__*/_react.default.createElement("sup", null, "Demographic - ", this.state.project.projectDemographic), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-content"
+      })))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Description")), /*#__PURE__*/_react.default.createElement("p", null, this.state.project.projectDetails), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("h5", null, /*#__PURE__*/_react.default.createElement("b", null, "Project Supporting Documents")), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://riserafrica.georgekprojects.tk" + this.state.project.financialDocumentation,
+        download: true
+      }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+      }), "Click To Download Business Case"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://riserafrica.georgekprojects.tk" + this.state.project.businessCaeDocumentation,
+        download: true
+      }, "  ", /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/icons8-pdf-48.png"
+      }), " Click To Download Financial Breakdown"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("i", null, "Project Images Here..."), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "center"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/index3.jfif"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/six.jfif"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col md4 offset1"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "https://georgekariukiportfolio.tk/imagesForTeam00142/eight.jfif"
+      })))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "card-action"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "btn brown"
+      }, /*#__PURE__*/_react.default.createElement("i", {
+        className: "material-icons"
+      }, "favorite")))))
+    );
   }
 
 }
@@ -35338,7 +35472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63964" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
